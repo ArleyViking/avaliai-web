@@ -1,0 +1,32 @@
+.MiniDash {
+  max-width: var(--screenwidth);
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: hsla(180, 5%, 99%, 0.8);
+  box-shadow: 0px 8px 24px rgba(9, 3, 28, 0.02);
+  backdrop-filter: blur(4px);
+  border-radius: 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  padding: 40px;
+  margin-top: -60px;
+  animation: showUp 800ms linear;
+  @keyframes showUp {
+    0% {
+      opacity: 0;
+      transform: translateY(32px);
+    }
+
+    32% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

@@ -1,0 +1,59 @@
+.SectionBanner {
+  height: 100vh;
+  background: linear-gradient(90deg, #f6e3fd 0%, #e5f6fa 50%, #f2e0f5 100%);
+  .Content {
+    max-width: var(--screenwidth);
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: inherit;
+    gap: 2rem;
+    animation: showUp 800ms linear;
+
+    h1 {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 4rem;
+      line-height: 130%;
+
+      text-align: center;
+      letter-spacing: 0.01em;
+
+      color: #09031c;
+
+      .hl {
+        color: #6c40ea;
+      }
+    }
+    p {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 130%;
+      /* or 31px */
+      text-align: center;
+      color: rgba(9, 3, 28, 0.8);
+    }
+  }
+
+  @keyframes showUp {
+    0% {
+      opacity: 0;
+      transform: translateY(32px);
+    }
+
+    32% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

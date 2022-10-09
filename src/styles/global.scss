@@ -5,10 +5,30 @@
 }
 :root {
   --background: #f1f2f3;
-  --screenwitdh: 1536px;
+  --screenwidth: 1536px;
 }
 body {
-  background-color: var (--background);
+  background-color: var(--background);
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.1);
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.2);
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.4);
+  }
+  &::-webkit-scrollbar-thumb:active {
+    background: rgba(0, 0, 0, 0.9);
+  }
 }
 
 body,
