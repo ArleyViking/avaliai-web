@@ -1,0 +1,17 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --background: #f1f2f3;
+  --screenwitdh: 1536px;
+}
+body {
+  background-color: var (--background);
+}
+
+body,
+button {
+  font-family: "Inter", sans-serif;
+}
