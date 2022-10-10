@@ -1,6 +1,6 @@
 import "./styles.scss";
 
-export function Banner() {
+export function BannerHeader() {
   return (
     <section className="SectionBanner">
       <div className="Content">

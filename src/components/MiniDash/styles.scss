@@ -12,8 +12,9 @@
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 2rem;
   padding: 40px;
-  margin-top: -60px;
+  margin-top: -96px;
   animation: showUp 800ms linear;
+
   @keyframes showUp {
     0% {
       opacity: 0;

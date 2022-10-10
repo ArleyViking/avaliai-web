@@ -1,0 +1,43 @@
+.Recommendation {
+  max-width: var(--screenwidth);
+  margin: 0 auto;
+  margin-top: var(--section-margin);
+}
+
+.text {
+  margin-bottom: 32px;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  .title {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.75rem;
+    line-height: 140%;
+    /* or 36px */
+
+    letter-spacing: 0.01em;
+
+    color: rgba(9, 3, 28, 0.9);
+  }
+
+  .subtitle {
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 130%;
+    /* identical to box height, or 21px */
+
+    letter-spacing: 0.01em;
+
+    color: rgba(9, 3, 28, 0.7);
+  }
+}
+
+.items-card {
+  display: flex;
+  margin-bottom: 32px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}

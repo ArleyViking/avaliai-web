@@ -1,0 +1,51 @@
+.CardChecklist {
+  background-color: #fcfdfd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 40px 8px;
+  gap: 40px;
+  border-radius: 16px;
+  max-width: 496px;
+  transition: outline 200ms, background-color 100ms;
+  outline-color: #fcfcfc;
+  height: 100%;
+  .Imagem {
+    width: 40vh;
+  }
+  .text {
+    display: flex;
+
+    .title-card {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 130%;
+      letter-spacing: 0.01em;
+      color: rgba(9, 3, 28, 0.9);
+      transition: color 100ms;
+    }
+    .descrition-card {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 130%;
+      /* or 21px */
+
+      letter-spacing: 0.01em;
+
+      color: rgba(9, 3, 28, 0.8);
+    }
+  }
+
+  &:hover {
+    outline: 1px solid rgba(9, 3, 28, 0.03);
+    background-color: rgba(255, 255, 255);
+    .title-card {
+      color: var(--purple-200);
+    }
+  }
+}

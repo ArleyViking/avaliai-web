@@ -4,16 +4,32 @@
   box-sizing: border-box;
 }
 :root {
+  //Cores
   --background: #f1f2f3;
+  --purple-100: #6c40ea;
+  --purple-200: #5500df;
+
+  //spaces
   --screenwidth: 1536px;
+  --section-margin: 72px;
 }
+
 body {
   background-color: var(--background);
   overflow-x: hidden;
 
+  ::selection {
+    background: #8e6cef;
+    color: #fff;
+  }
+  ::-moz-selection {
+    background: #1f6a8f;
+    color: #fff;
+  }
+
   &::-webkit-scrollbar {
-    width: 6px;
-    height: 6px;
+    width: 4px;
+    height: 4px;
   }
   &::-webkit-scrollbar-track {
     border-radius: 10px;

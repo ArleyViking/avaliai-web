@@ -5,6 +5,7 @@ header {
   border-bottom: 1px solid rgba(28, 37, 44, 0.08);
   backdrop-filter: blur(12px);
   position: fixed;
+  z-index: 1;
   .content {
     max-width: var(--screenwidth);
     margin: 0 auto;
@@ -62,4 +63,9 @@ header {
   letter-spacing: 0.02em;
   width: 156px;
   height: 36px;
+  transition: background-color 300ms;
+
+  &:hover {
+    background-color: #5623e6;
+  }
 }

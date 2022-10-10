@@ -1,0 +1,43 @@
+.About {
+  max-width: var(--screenwidth);
+  margin: 0 auto;
+  background: linear-gradient(90deg, #8936ff 0%, #a465ff 100%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.02);
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 40px;
+  align-items: center;
+  margin-top: var(--section-margin);
+
+  .text {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+  }
+  .title {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.75rem;
+    line-height: 140%;
+    /* or 36px */
+
+    letter-spacing: 0.01em;
+
+    color: #fff;
+  }
+  a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 32px;
+    text-decoration: none;
+    width: max-content;
+
+    background: #fafafa;
+    box-shadow: 0px 8px 8px rgba(57, 23, 117, 0.04);
+    border-radius: 8px;
+  }
+}

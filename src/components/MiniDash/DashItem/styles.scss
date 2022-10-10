@@ -9,12 +9,13 @@
   border: 1px solid rgba(9, 3, 28, 0.08);
   filter: drop-shadow(0px 8px 8px rgba(108, 64, 234, 0.01));
   border-radius: 16px;
+
   h4 {
     font-family: "Rubik";
     font-style: normal;
     font-weight: 700;
     font-size: 48px;
-    line-height: 130%;
+    line-height: 120%;
     /* or 62px */
 
     text-align: center;
@@ -33,6 +34,6 @@
 
     letter-spacing: 0.02em;
 
-    color: rgba(9, 3, 28, 0.8);
+    color: rgba(9, 3, 28, 0.9);
   }
 }

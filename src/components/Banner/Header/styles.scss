@@ -1,6 +1,7 @@
 .SectionBanner {
-  height: 100vh;
+  height: 105vh;
   background: linear-gradient(90deg, #f6e3fd 0%, #e5f6fa 50%, #f2e0f5 100%);
+
   .Content {
     max-width: var(--screenwidth);
     margin: 0 auto;
@@ -12,6 +13,7 @@
     height: inherit;
     gap: 2rem;
     animation: showUp 800ms linear;
+    padding-bottom: 16px;
 
     h1 {
       font-family: "Inter";
@@ -44,7 +46,7 @@
   @keyframes showUp {
     0% {
       opacity: 0;
-      transform: translateY(32px);
+      transform: translateY(80px);
     }
 
     32% {
