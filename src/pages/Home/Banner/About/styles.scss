@@ -6,11 +6,11 @@
   border-radius: 16px;
   display: flex;
   justify-content: space-between;
-  padding-left: 40px;
   align-items: center;
   margin-top: var(--section-margin);
 
   .text {
+    margin: 40px;
     display: flex;
     gap: 2rem;
     flex-direction: column;
@@ -18,7 +18,7 @@
   .title {
     font-family: "Inter";
     font-style: normal;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 1.75rem;
     line-height: 140%;
     /* or 36px */
@@ -35,9 +35,16 @@
     padding: 12px 32px;
     text-decoration: none;
     width: max-content;
-
+    font-weight: 500;
     background: #fafafa;
     box-shadow: 0px 8px 8px rgba(57, 23, 117, 0.04);
     border-radius: 8px;
+    transition: background 100ms;
+    &:hover {
+      background: hsl(0, 0%, 96%);
+    }
+  }
+  img {
+    pointer-events: none;
   }
 }

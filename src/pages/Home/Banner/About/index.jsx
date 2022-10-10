@@ -1,6 +1,6 @@
 import "./styles.scss";
-import imgChecks from "../../../assets/img-checks.svg";
-import { WithScrollReveal } from "../../WithScrollReveal";
+import imgChecks from "@/assets/img-checks.svg";
+import { WithScrollReveal } from "@/components/WithScrollReveal";
 
 export function BannerAbout() {
   return (

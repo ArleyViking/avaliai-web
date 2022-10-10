@@ -13,6 +13,7 @@
   height: 100%;
   .Imagem {
     width: 40vh;
+    pointer-events: none;
   }
   .text {
     display: flex;

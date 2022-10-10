@@ -1,4 +1,4 @@
-import { WithScrollReveal } from "../../WithScrollReveal";
+import { WithScrollReveal } from "@/components/WithScrollReveal";
 import "./styles.scss";
 
 export function DashItem({ value, label }) {

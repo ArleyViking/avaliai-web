@@ -1,9 +1,9 @@
 import { CardChecklist } from "./CardChecklist";
 import "./styles.scss";
-import imagem from "../../../src/assets/img-nielsen.svg";
-import imagem2 from "../../../src/assets/imgtipos.svg";
-import imagem3 from "../../../src/assets/imgdesingvisual.svg";
-import { WithScrollReveal } from "../WithScrollReveal";
+import imagem from "@/assets/img-nielsen.svg";
+import imagem2 from "@/assets/imgtipos.svg";
+import imagem3 from "@/assets/imgdesingvisual.svg";
+import { WithScrollReveal } from "@/components/WithScrollReveal";
 
 export function RecommendationSection() {
   return (
@@ -26,7 +26,7 @@ export function RecommendationSection() {
         <WithScrollReveal delay={800}>
           <CardChecklist
             title="Tipos de plataforma"
-            descrition="Heurísticas para avaliar seu software levando em consideraçaõ a plataforma que foi feito"
+            descrition="Heurísticas para avaliar seu software levando em consideração a plataforma que foi feito"
             imagem={imagem2}
           />
         </WithScrollReveal>
