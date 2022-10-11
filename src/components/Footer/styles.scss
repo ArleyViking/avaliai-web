@@ -1,0 +1,31 @@
+.Footer {
+  background: #e9ebec;
+  .Content-footer {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0px;
+    max-width: var(--screenwidth);
+    p {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 130%;
+      /* or 18px */
+
+      letter-spacing: 0.01em;
+
+      color: rgba(9, 3, 28, 0.8);
+      span {
+        color: #5500df;
+      }
+    }
+    .copy {
+      display: flex;
+      gap: 0.5rem;
+    }
+  }
+}

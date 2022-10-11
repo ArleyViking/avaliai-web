@@ -1,14 +1,18 @@
 import { Header } from "./components/Header";
 import "./styles/global.scss";
-import { Home } from "./pages/Home";
+
+import { AppRoutes } from "./routes";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <main className="Main">
-        <Home />
-      </main>
+      <BrowserRouter>
+        <Header />
+        <main className="Main">
+          <AppRoutes />
+        </main>
+      </BrowserRouter>
     </div>
   );
 }

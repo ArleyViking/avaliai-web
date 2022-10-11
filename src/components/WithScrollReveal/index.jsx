@@ -9,7 +9,7 @@ export function WithScrollReveal({ delay, children }) {
     async function animate() {
       if (refCurrent) {
         scrollReveal().reveal(refCurrent, {
-          reset: true,
+          reset: false,
           delay: delay ?? 500,
           scale: 1,
           easing: "ease",

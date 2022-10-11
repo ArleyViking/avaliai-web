@@ -1,9 +1,9 @@
-.UXSection {
+.PESection {
   max-width: var(--screenwidth);
   margin: var(--section-margin) auto;
 }
 
-.Items-UX {
+.Items-PE {
   margin-top: 2rem;
   display: grid;
   grid-template-columns: repeat(4, minmax(366px, 1fr));

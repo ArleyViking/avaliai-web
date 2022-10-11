@@ -1,24 +1,33 @@
 import "./styles.scss";
 import logo from "../../assets/logo.svg";
+import { NavLink } from "./NavLink";
 
 export function Header() {
   return (
     <header>
       <div className="content">
-        <a href="#">
-          <img className="logo" src={logo} alt="Logo" />
-        </a>
+        <NavLink href="/">
+          <span>
+            <img className="logo" src={logo} alt="Logo" />
+          </span>
+        </NavLink>
 
         <nav className="navbar">
           <ul>
             <li>
-              <a href=""> Tela inicial</a>{" "}
+              <NavLink href="/">
+                <span> Tela inicial</span>
+              </NavLink>
             </li>
             <li>
-              <a href=""> Sobre o acervo</a>{" "}
+              <NavLink href="/sobreoacervo">
+                <span>Sobre o acervo</span>
+              </NavLink>
             </li>
             <li>
-              <a href=""> Contribua</a>{" "}
+              <NavLink href="/contribua">
+                <span> Contribua</span>
+              </NavLink>{" "}
             </li>
           </ul>
         </nav>

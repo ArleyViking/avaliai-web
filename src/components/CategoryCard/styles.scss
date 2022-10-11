@@ -1,0 +1,72 @@
+.CategoryCard {
+  background-color: #fcfdfd;
+  border-radius: 12px;
+  padding: 24px;
+  outline-color: #fcfcfc;
+  transition: outline 200ms, background-color 100ms;
+  max-width: 366px;
+
+  .Content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .title {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+
+      p {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 130%;
+        letter-spacing: 0.01em;
+        color: rgba(9, 3, 28, 0.6);
+      }
+      .title-category {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.125rem;
+        line-height: 130%;
+        /* or 23px */
+        letter-spacing: 0.01em;
+        transition: color 100ms;
+        color: rgba(9, 3, 28, 0.8);
+      }
+    }
+
+    .data {
+      display: flex;
+      gap: 8px;
+      padding-right: 40px;
+
+      p {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 4px 12px;
+        gap: 10px;
+        background: rgba(108, 64, 234, 0.08);
+        border-radius: 8px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 130%;
+        /* identical to box height, or 16px */
+        color: var(--purple-100);
+      }
+    }
+  }
+  &:hover {
+    outline: 1px solid rgba(9, 3, 28, 0.04);
+    background-color: rgba(255, 255, 255);
+
+    .Content .title-category {
+      color: var(--purple-200);
+    }
+  }
+}
