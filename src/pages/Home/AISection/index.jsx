@@ -4,6 +4,7 @@ import { HeaderSectionChecklist } from "../HeaderSectionChecklist";
 import { Layout } from "phosphor-react";
 
 import { CategoryCard } from "../../../components/CategoryCard";
+import { WithScrollReveal } from "@/components/WithScrollReveal";
 
 export function AISection() {
   return (
@@ -17,9 +18,15 @@ export function AISection() {
       />
 
       <div className="Items-AI">
-        <CategoryCard title="Arquitetura da informação" />
-        <CategoryCard title="Layout" />
-        <CategoryCard title="Responsividade" />
+        <WithScrollReveal delay={800}>
+          <CategoryCard title="Arquitetura da informação" />
+        </WithScrollReveal>
+        <WithScrollReveal delay={1200}>
+          <CategoryCard title="Layout" />
+        </WithScrollReveal>
+        <WithScrollReveal delay={1600}>
+          <CategoryCard title="Responsividade" />
+        </WithScrollReveal>
       </div>
     </section>
   );

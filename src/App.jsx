@@ -3,6 +3,7 @@ import "./styles/global.scss";
 
 import { AppRoutes } from "./routes";
 import { BrowserRouter } from "react-router-dom";
+import { Footer } from "./components/Footer";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <main className="Main">
           <AppRoutes />
         </main>
+        <Footer />
       </BrowserRouter>
     </div>
   );

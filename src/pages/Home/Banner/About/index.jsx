@@ -4,7 +4,7 @@ import { WithScrollReveal } from "@/components/WithScrollReveal";
 
 export function BannerAbout() {
   return (
-    <WithScrollReveal>
+    <WithScrollReveal delay={2000}>
       <div className="About">
         <div className="text">
           <h3 className="title">

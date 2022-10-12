@@ -4,6 +4,7 @@ import { HeaderSectionChecklist } from "../HeaderSectionChecklist";
 import { GameController } from "phosphor-react";
 
 import { CategoryCard } from "../../../components/CategoryCard";
+import { WithScrollReveal } from "@/components/WithScrollReveal";
 
 export function JMSection() {
   return (
@@ -17,10 +18,18 @@ export function JMSection() {
       />
 
       <div className="Items-JM">
-        <CategoryCard title="Heurísticas de Nielsen para jogos" />
-        <CategoryCard title="Jogabilidade" />
-        <CategoryCard title="Particularidade de jogos móveis" />
-        <CategoryCard title="Linguagem" />
+        <WithScrollReveal delay={800}>
+          <CategoryCard title="Heurísticas de Nielsen para jogos" />
+        </WithScrollReveal>
+        <WithScrollReveal delay={1200}>
+          <CategoryCard title="Jogabilidade" />
+        </WithScrollReveal>
+        <WithScrollReveal delay={1600}>
+          <CategoryCard title="Particularidade de jogos móveis" />
+        </WithScrollReveal>
+        <WithScrollReveal delay={2000}>
+          <CategoryCard title="Linguagem" />
+        </WithScrollReveal>
       </div>
     </section>
   );

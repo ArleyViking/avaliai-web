@@ -1,5 +1,7 @@
 .Footer {
   background: #e9ebec;
+  margin-top: 48px;
+
   .Content-footer {
     margin: 0 auto;
     display: flex;
@@ -8,6 +10,7 @@
     align-items: center;
     padding: 24px 0px;
     max-width: var(--screenwidth);
+
     p {
       font-family: "Inter";
       font-style: normal;

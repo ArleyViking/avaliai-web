@@ -6,10 +6,10 @@ import { BannerAbout } from "./Banner/About";
 import { UXSection } from "./UXSection";
 import { AISection } from "./AISection";
 import { PESection } from "./PESection";
-import { Colaboration } from "./Banner/Colaboration";
+import { Colaboration } from "@/components/Colaboration";
+
 import { MHSection } from "./MHSection";
 import { JMSection } from "./JMSection";
-import { Footer } from "../../components/Footer";
 
 export function Home() {
   return (
@@ -27,7 +27,6 @@ export function Home() {
       <PESection />
       <MHSection />
       <JMSection />
-      <Footer />
     </>
   );
 }

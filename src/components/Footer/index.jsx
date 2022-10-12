@@ -1,5 +1,6 @@
 import "./styles.scss";
 import logo from "@/assets/icon-logo.svg";
+
 export function Footer() {
   return (
     <div className="Footer">

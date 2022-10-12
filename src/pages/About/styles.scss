@@ -1,0 +1,55 @@
+.header {
+  width: 100%;
+
+  .content-wrapper {
+    background: linear-gradient(90deg, #f6e3fd 0%, #e5f6fa 50%, #f2e0f5 100%);
+  }
+  .content-about {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 300px;
+    gap: 16px;
+    max-width: var(--screenwidth);
+
+    .title-about {
+      margin-top: 1rem;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 2.5rem;
+      line-height: 120%;
+      /* identical to box height, or 48px */
+
+      letter-spacing: 0.01em;
+      color: #09031c;
+    }
+
+    .descrition-about {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.125rem;
+      line-height: 130%;
+      color: rgba(9, 3, 28, 0.9);
+    }
+  }
+
+  .DescriptionPages {
+    margin: 48px auto;
+    max-width: var(--screenwidth);
+    display: flex;
+    gap: 1.5rem;
+    flex-direction: column;
+    .row2 {
+      display: flex;
+      gap: inherit;
+    }
+  }
+  @media (max-width: 768px) {
+    .row2 {
+      flex-direction: column;
+    }
+  }
+}
