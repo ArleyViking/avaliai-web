@@ -1,0 +1,31 @@
+.Step {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 24px;
+  border-radius: 16px;
+  border: 1px solid rgba(9, 3, 28, 0.12);
+  gap: 8px;
+
+  .title {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 130%;
+    /* or 16px */
+
+    color: rgba(9, 3, 28, 0.8);
+  }
+  .subtitle {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+
+    color: rgba(9, 3, 28, 0.8);
+  }
+  svg {
+    color: var(--purple-100);
+  }
+}
