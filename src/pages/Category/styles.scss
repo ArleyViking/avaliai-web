@@ -1,0 +1,133 @@
+.Category {
+  a {
+    text-decoration: none;
+  }
+  .header-category {
+    width: 100%;
+
+    .content-wrapper-category {
+      background: linear-gradient(90deg, #f6e3fd 0%, #e5f6fa 50%, #f2e0f5 100%);
+    }
+
+    .content-category {
+      margin: 0 auto;
+      padding-top: 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 300px;
+      gap: 8px;
+      max-width: var(--screenwidth);
+
+      .back {
+        a {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 100%;
+          /* or 18px */
+          text-decoration: none;
+          color: #6c40ea;
+        }
+      }
+      .title-category {
+        max-width: 500px;
+        margin-bottom: 8px;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 2.5rem;
+        line-height: 120%;
+        /* identical to box height, or 48px */
+
+        letter-spacing: 0.01em;
+        color: #09031c;
+      }
+
+      .description-category {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.125rem;
+        line-height: 130%;
+        color: rgba(9, 3, 28, 0.9);
+      }
+      .datas {
+        display: flex;
+        gap: 8px;
+        margin-top: 12px;
+        p {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          padding: 4px 12px;
+          gap: 10px;
+
+          background: rgba(9, 3, 28, 0.08);
+          border-radius: 8px;
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 130%;
+          /* identical to box height, or 16px */
+
+          color: rgba(9, 3, 28, 0.87);
+        }
+      }
+    }
+  }
+  .breadcrumb {
+    margin: 0 auto;
+    margin-top: 48px;
+    max-width: var(--screenwidth);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(9, 3, 28, 0.87);
+
+    p {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 120%;
+      /* identical to box height, or 22px */
+
+      letter-spacing: 0.01em;
+    }
+    .item {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+  }
+
+  .heuristiclist {
+    margin: 24px auto;
+    width: 100%;
+    max-width: var(--screenwidth);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .col1 {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      flex: 1;
+    }
+
+    .col2 {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      flex: 1;
+    }
+  }
+}

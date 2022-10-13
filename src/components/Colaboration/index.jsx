@@ -1,5 +1,6 @@
 import "./styles.scss";
 import imgColaborations from "@/assets/imgColaboration.png";
+import { Link } from "react-router-dom";
 
 export function Colaboration({ title, subtitle }) {
   return (
@@ -11,7 +12,7 @@ export function Colaboration({ title, subtitle }) {
         <p className="title-c">{title}</p>
         <p className="subtitle-c">{subtitle}</p>
       </div>
-      <a href="">Contribua conosco</a>
+      <Link to="/contribua">Contribua conosco</Link>
     </div>
   );
 }

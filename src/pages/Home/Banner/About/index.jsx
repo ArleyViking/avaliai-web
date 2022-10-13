@@ -1,17 +1,18 @@
 import "./styles.scss";
 import imgChecks from "@/assets/img-checks.svg";
 import { WithScrollReveal } from "@/components/WithScrollReveal";
+import { Link } from "react-router-dom";
 
 export function BannerAbout() {
   return (
-    <WithScrollReveal delay={2000}>
+    <WithScrollReveal delay={1400}>
       <div className="About">
         <div className="text">
           <h3 className="title">
             Conheça um pouco mais sobre esse projeto e <br /> como você pode
             usufruir dele.{" "}
           </h3>
-          <a href="">Conhecer o acervo</a>
+          <Link to="/sobreoacervo">Conhecer o acervo</Link>
         </div>
         <img src={imgChecks} />
       </div>

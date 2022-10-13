@@ -4,6 +4,7 @@ import imagem from "@/assets/img-nielsen.svg";
 import imagem2 from "@/assets/imgtipos.svg";
 import imagem3 from "@/assets/imgdesingvisual.svg";
 import { WithScrollReveal } from "@/components/WithScrollReveal";
+import { Link } from "react-router-dom";
 
 export function RecommendationSection() {
   return (
@@ -17,11 +18,13 @@ export function RecommendationSection() {
       </div>
       <div className="items-card">
         <WithScrollReveal>
-          <CardChecklist
-            title="Heurísticas de Nielsen"
-            descrition=" A maioria das heurísticas desse acervo organizadas entre as 10 heurísticas de Nielsen."
-            imagem={imagem}
-          />
+          <Link to="/checklist">
+            <CardChecklist
+              title="Heurísticas de Nielsen"
+              descrition=" A maioria das heurísticas desse acervo organizadas entre as 10 heurísticas de Nielsen."
+              imagem={imagem}
+            />
+          </Link>
         </WithScrollReveal>
         <WithScrollReveal delay={800}>
           <CardChecklist

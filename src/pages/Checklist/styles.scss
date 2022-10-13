@@ -1,0 +1,141 @@
+.Checklist {
+  a {
+    text-decoration: none;
+  }
+  .header-checklist {
+    width: 100%;
+
+    .content-wrapper-checklist {
+      background: linear-gradient(90deg, #f6e3fd 0%, #e5f6fa 50%, #f2e0f5 100%);
+    }
+    .content-all {
+      margin: 0 auto;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      max-width: var(--screenwidth);
+      .image {
+        margin-top: 2.5rem;
+        opacity: 95%;
+        pointer-events: none;
+      }
+      .content-checklist {
+        margin: 0 auto;
+        width: 100%;
+        padding-top: 32px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 300px;
+        gap: 4px;
+        max-width: var(--screenwidth);
+
+        .back {
+          a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 100%;
+            /* or 18px */
+            text-decoration: none;
+            color: #6c40ea;
+          }
+        }
+        .title-checklist {
+          margin-bottom: 8px;
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 2.5rem;
+          line-height: 120%;
+          /* identical to box height, or 48px */
+
+          letter-spacing: 0.01em;
+          color: #09031c;
+        }
+
+        .description-checklist {
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 1.125rem;
+          line-height: 130%;
+          color: rgba(9, 3, 28, 0.9);
+        }
+        .datas {
+          display: flex;
+          gap: 8px;
+          margin-top: 12px;
+          p {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 4px 12px;
+            gap: 10px;
+
+            background: rgba(9, 3, 28, 0.08);
+            border-radius: 8px;
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 130%;
+            /* identical to box height, or 16px */
+
+            color: rgba(9, 3, 28, 0.87);
+          }
+        }
+      }
+    }
+  }
+  .breadcrumb {
+    margin: 0 auto;
+    margin-top: 48px;
+    max-width: var(--screenwidth);
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: rgba(9, 3, 28, 0.87);
+
+    p {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 120%;
+      /* identical to box height, or 22px */
+
+      letter-spacing: 0.01em;
+    }
+  }
+
+  .categorylist {
+    margin: 24px auto;
+    width: 100%;
+    justify-content: space-between;
+    max-width: var(--screenwidth);
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+
+    .col1 {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      flex: 1;
+    }
+
+    .col2 {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      flex: 1;
+    }
+  }
+}
