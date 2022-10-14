@@ -20,7 +20,7 @@ export function Category() {
               </h2>
               <div className="datas">
                 <p> 12 Heurísticas no total</p>
-                <p> Fonte utilizada: Artigo acadêmico</p>
+                <p> 40 Itens de verificação</p>
               </div>
             </div>
           </div>

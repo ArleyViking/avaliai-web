@@ -5,7 +5,7 @@ export function HeuristicCard({ title, description }) {
     <div className="HeuristicCard">
       <div className="Content">
         <div className="title">
-          <p>Categoria</p>
+          <p>Heurística</p>
           <p className="title-heuristic">{title}</p>
           <p className="description-heuristic">{description}</p>
         </div>

@@ -28,12 +28,23 @@
         font-family: "Inter";
         font-style: normal;
         font-weight: 600;
-        font-size: 1.125rem;
+        font-size: 18px;
         line-height: 130%;
         /* or 23px */
         letter-spacing: 0.01em;
         transition: color 100ms;
         color: rgba(9, 3, 28, 0.8);
+      }
+      .description-heuristic {
+        margin-top: 2px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 120%;
+        /* or 17px */
+
+        letter-spacing: 0.01em;
+
+        color: rgba(9, 3, 28, 0.7);
       }
     }
 
