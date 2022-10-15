@@ -1,6 +1,6 @@
 import "./styles.scss";
 
-export function HeuristicCard({ title, description }) {
+export function HeuristicCard({ title, description, num_itens, fonte }) {
   return (
     <div className="HeuristicCard">
       <div className="Content">
@@ -10,8 +10,7 @@ export function HeuristicCard({ title, description }) {
           <p className="description-heuristic">{description}</p>
         </div>
         <div className="data">
-          <p> 12 Heurísticas</p>
-          <p>Fonte utilizada: Artigo acadêmico</p>
+          <p> {num_itens} Itens de verificação</p>
         </div>
       </div>
     </div>

@@ -19,9 +19,12 @@ export function AppRoutes() {
       <Route index path="/" element={<Home />} />
       <Route path="/sobreoacervo" element={<AboutProject />} />
       <Route path="/contribua" element={<Contribute />} />
-      <Route path="/checklist" element={<Checklist />} />
-      <Route path="/category" element={<Category />} />
-      <Route path="/category/heuristica" element={<Heuristic />} />
+      <Route path="/checklist/:id" element={<Checklist />} />
+      <Route path="/checklist/categoria/:id" element={<Category />} />
+      <Route
+        path="/checklist/categoria/heuristica/:id"
+        element={<Heuristic />}
+      />
     </Routes>
   );
 }

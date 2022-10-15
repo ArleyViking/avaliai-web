@@ -17,7 +17,7 @@ export function Heuristic() {
         <div className="content-wrapper-heuristic">
           <div className="content-heuristic">
             <div className="back">
-              <Link to="/category">
+              <Link to="/categoria">
                 <ArrowLeft size={24} /> Heurística
               </Link>
             </div>

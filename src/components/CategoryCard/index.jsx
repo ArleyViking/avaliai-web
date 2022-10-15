@@ -1,5 +1,5 @@
 import "./styles.scss";
-export function CategoryCard({ title }) {
+export function CategoryCard({ title, num_heu, num_itens }) {
   return (
     <div className="CategoryCard">
       <div className="Content">
@@ -8,8 +8,8 @@ export function CategoryCard({ title }) {
           <p className="title-category">{title}</p>
         </div>
         <div className="data">
-          <p> 12 Heurísticas</p>
-          <p>48 Itens de verificação</p>
+          <p> {num_heu} Heurísticas</p>
+          <p>{num_itens} Itens de verificação</p>
         </div>
       </div>
     </div>

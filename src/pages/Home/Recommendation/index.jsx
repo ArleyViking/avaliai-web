@@ -18,7 +18,7 @@ export function RecommendationSection() {
       </div>
       <div className="items-card">
         <WithScrollReveal>
-          <Link to="/checklist">
+          <Link to="/checklist/633ce4297c12faefc8116933">
             <CardChecklist
               title="Heurísticas de Nielsen"
               descrition=" A maioria das heurísticas desse acervo organizadas entre as 10 heurísticas de Nielsen."
@@ -26,19 +26,24 @@ export function RecommendationSection() {
             />
           </Link>
         </WithScrollReveal>
+
         <WithScrollReveal delay={800}>
-          <CardChecklist
-            title="Tipos de plataforma"
-            descrition="Heurísticas para avaliar seu software levando em consideração a plataforma que foi feito"
-            imagem={imagem2}
-          />
+          <Link to="/checklist/633ce65cc5c02f4bf9082582">
+            <CardChecklist
+              title="Tipos de plataforma"
+              descrition="Heurísticas para avaliar seu software levando em consideração a plataforma que foi feito"
+              imagem={imagem2}
+            />
+          </Link>
         </WithScrollReveal>
         <WithScrollReveal delay={1200}>
-          <CardChecklist
-            title="Design Visual"
-            descrition="Heurísticas para avaliar as questões estéticas dos componentes e dos conteúdos da sua interface."
-            imagem={imagem3}
-          />
+          <Link to="/checklist/633ce9a43eb2734078de5813">
+            <CardChecklist
+              title="Design Visual"
+              descrition="Heurísticas para avaliar as questões estéticas dos componentes e dos conteúdos da sua interface."
+              imagem={imagem3}
+            />
+          </Link>
         </WithScrollReveal>
       </div>
     </section>

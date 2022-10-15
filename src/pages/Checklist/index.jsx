@@ -2,10 +2,18 @@ import { ArrowLeft, Folders } from "phosphor-react";
 import { Link } from "react-router-dom";
 import image from "../../assets/img-nielsen.svg";
 import "./styles.scss";
-
+import { useParams } from "react-router-dom";
+import { WithScrollReveal } from "@/components/WithScrollReveal";
 import { CategoryCard } from "../../components/CategoryCard";
+import useSWR from "swr";
+
+import { fetcher } from "../../services/fetcher";
 
 export function Checklist() {
+  const { id: checklistId } = useParams();
+
+  const { data: categories } = useSWR(`/categoria/${checklistId}`, fetcher);
+
   return (
     <div className="Checklist">
       <div className="header-checklist">
@@ -18,16 +26,23 @@ export function Checklist() {
                 </Link>
               </div>
               <div>
-                <h2 className="title-checklist">Heurísticas de Nielsen</h2>
+                <h2 className="title-checklist">
+                  {categories?.[0].id_check.nome}
+                </h2>
                 <p className="description-checklist">
-                  A marioria das heurísticas desse acervo organizadas entre as
-                  <br />
-                  10 heurísticas de Nielsen.
+                  {categories?.[0].id_check.descricao}
                 </p>
                 <div className="datas">
-                  <p> 10 Categorias</p>
-                  <p> 95 Heurísticas no total</p>
-                  <p> 120 Itens de verificação no total</p>
+                  <p> {categories?.[0].id_check.num_cat} Categorias</p>
+                  <p>
+                    {" "}
+                    {categories?.[0].id_check.num_heu} Heurísticas no total
+                  </p>
+                  <p>
+                    {" "}
+                    {categories?.[0].id_check.num_itens} Itens de verificação no
+                    total
+                  </p>
                 </div>
               </div>
             </div>
@@ -43,28 +58,18 @@ export function Checklist() {
       </div>
 
       <div className="categorylist">
-        <div className="col1">
-          <Link to="/category">
-            <CategoryCard title={"Visibilidade do status do sistema"} />
-          </Link>
-          <CategoryCard title={"Controle e liberdade do usuário"} />
-          <CategoryCard title={"Prevenção de erros"} />
-          <CategoryCard title={"Eficiência e flexibilidade de uso"} />
-          <CategoryCard
-            title={
-              "Ajude os usuários a reconhecer, diagnosticar e recuperar erros"
-            }
-          />
-        </div>
-        <div className="col2">
-          <CategoryCard
-            title={"Correspondência entre o sistema e o mundo real."}
-          />
-          <CategoryCard title={"Consistência e padronização"} />
-          <CategoryCard title={"Reconhecimento em vez de recordação"} />
-          <CategoryCard title={"Estética e design minimalista"} />
-          <CategoryCard title={"Ajuda e documentação"} />
-        </div>
+        {!!categories &&
+          categories?.map((category) => (
+            <WithScrollReveal delay={800} key={category.id}>
+              <Link to={`/checklist/categoria/${category.id}`}>
+                <CategoryCard
+                  title={category.nome}
+                  num_heu={category.num_heu}
+                  num_itens={category.num_itens}
+                />
+              </Link>
+            </WithScrollReveal>
+          ))}
       </div>
     </div>
   );

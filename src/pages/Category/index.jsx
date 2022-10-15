@@ -1,26 +1,39 @@
 import { ArrowLeft, CaretRight, Folders, FileText } from "phosphor-react";
-import { Link } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import { HeuristicCard } from "../../components/HeuristicCard";
 import "./styles.scss";
+import { WithScrollReveal } from "@/components/WithScrollReveal";
+
+import useSWR from "swr";
+
+import { fetcher } from "../../services/fetcher";
 
 export function Category() {
+  const { id: categoryId } = useParams();
+
+  const { data: heuristics } = useSWR(`/heuristicas/${categoryId}`, fetcher);
+  console.log(heuristics);
+
   return (
     <div className="Category">
       <div className="header-category">
         <div className="content-wrapper-category">
           <div className="content-category">
             <div className="back">
-              <Link to="/checklist">
+              <Link to={`/checklist/${heuristics?.[0].checklist}`}>
                 <ArrowLeft size={24} /> Categoria
               </Link>
             </div>
             <div>
               <h2 className="title-category">
-                Visibilidade do status do sistema
+                {heuristics?.[0].categoria.nome}
               </h2>
               <div className="datas">
-                <p> 12 Heurísticas no total</p>
-                <p> 40 Itens de verificação</p>
+                <p> {heuristics?.[0].categoria.num_heu} Heurísticas no total</p>
+                <p>
+                  {" "}
+                  {heuristics?.[0].categoria.num_itens} Itens de verificação
+                </p>
               </div>
             </div>
           </div>
@@ -38,32 +51,18 @@ export function Category() {
       </div>
 
       <div className="heuristiclist">
-        <Link to="/category/heuristica">
-          <HeuristicCard
-            title={"Mudança de comportamento"}
-            description={
-              "O feedback sobre o desempenho deve  ser dado fornecendo dados sobre o comportamento registrado ou avaliando o desempenho em relação a um padrão definido."
-            }
-          />
-        </Link>
-        <HeuristicCard
-          title={"Visibilidade do status do sistema"}
-          description={
-            "O design deve sempre manter os usuários informados sobre o que está acontecendo, por meio de feedback apropriado dentro de um período de tempo razoável."
-          }
-        />
-        <HeuristicCard
-          title={"Visualizações do app sem interrupções"}
-          description={
-            "Os aplicativos móveis NÃO devem interromper a atividade atual do usuário."
-          }
-        />
-        <HeuristicCard
-          title={"Visibilidade do estado da aplicação"}
-          description={
-            "A aplicação deve manter o usuário informado sobre todos os processos e mudanças de estado por meio de feedback apropriado e em tempo razoável."
-          }
-        />
+        {!!heuristics &&
+          heuristics?.map((heuristic) => (
+            <WithScrollReveal delay={400} key={heuristic._id}>
+              <Link to={`/checklist/categoria/heuristica/${heuristic._id}`}>
+                <HeuristicCard
+                  title={heuristic.nome}
+                  description={heuristic.descricao}
+                  num_itens={heuristic.num_itens}
+                />
+              </Link>
+            </WithScrollReveal>
+          ))}
       </div>
     </div>
   );

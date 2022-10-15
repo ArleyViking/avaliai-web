@@ -3,8 +3,19 @@ import { Smiley } from "phosphor-react";
 import "./styles.scss";
 import { CategoryCard } from "../../../components/CategoryCard";
 import { WithScrollReveal } from "@/components/WithScrollReveal";
+import useSWR from "swr";
+import { api } from "@/services/api";
 
+async function fetcher(url) {
+  const response = await api.get(url);
+  return response.data;
+}
 export function UXSection() {
+  const { data: categories } = useSWR(
+    "/categoria/633f8408fb49ad6a414ca748",
+    fetcher
+  );
+
   return (
     <section className="UXSection">
       <HeaderSectionChecklist
@@ -17,18 +28,16 @@ export function UXSection() {
       />
 
       <div className="Items-UX">
-        <WithScrollReveal delay={800}>
-          <CategoryCard title="Experiência simples" />
-        </WithScrollReveal>
-        <WithScrollReveal delay={1200}>
-          <CategoryCard title="Experiência acionável" />
-        </WithScrollReveal>
-        <WithScrollReveal delay={1600}>
-          <CategoryCard title="Experiência inteligente" />
-        </WithScrollReveal>
-        <WithScrollReveal delay={2000}>
-          <CategoryCard title="Experiência agradável" />
-        </WithScrollReveal>
+        {!!categories &&
+          categories?.map((category) => (
+            <WithScrollReveal delay={800} key={category.id}>
+              <CategoryCard
+                title={category.nome}
+                num_heu={category.num_heu}
+                num_itens={category.num_itens}
+              />
+            </WithScrollReveal>
+          ))}
       </div>
     </section>
   );
