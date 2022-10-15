@@ -1,9 +1,11 @@
 import { useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
+
 import { AboutProject } from "./pages/About";
 import { Category } from "./pages/Category";
 import { Checklist } from "./pages/Checklist";
 import { Contribute } from "./pages/Contribute";
+import { Heuristic } from "./pages/Heuristic";
 import { Home } from "./pages/Home";
 
 export function AppRoutes() {
@@ -19,6 +21,7 @@ export function AppRoutes() {
       <Route path="/contribua" element={<Contribute />} />
       <Route path="/checklist" element={<Checklist />} />
       <Route path="/category" element={<Category />} />
+      <Route path="/category/heuristica" element={<Heuristic />} />
     </Routes>
   );
 }

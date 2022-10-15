@@ -26,6 +26,7 @@ export function Category() {
           </div>
         </div>
       </div>
+
       <div className="breadcrumb">
         <div className="item">
           <Folders size={24} /> <p>Lista de categorias</p>
@@ -37,12 +38,14 @@ export function Category() {
       </div>
 
       <div className="heuristiclist">
-        <HeuristicCard
-          title={"Mudança de comportamento"}
-          description={
-            "O feedback sobre o desempenho deve  ser dado fornecendo dados sobre o comportamento registrado ou avaliando o desempenho em relação a um padrão definido."
-          }
-        />
+        <Link to="/category/heuristica">
+          <HeuristicCard
+            title={"Mudança de comportamento"}
+            description={
+              "O feedback sobre o desempenho deve  ser dado fornecendo dados sobre o comportamento registrado ou avaliando o desempenho em relação a um padrão definido."
+            }
+          />
+        </Link>
         <HeuristicCard
           title={"Visibilidade do status do sistema"}
           description={
