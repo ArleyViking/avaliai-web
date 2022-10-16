@@ -1,0 +1,30 @@
+<svg width="396" height="136" viewBox="0 0 396 136" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.9">
+<rect y="38" width="60" height="60" rx="8" fill="#FCFDFD"/>
+<path d="M41 61H19C18.4477 61 18 61.4477 18 62V78C18 78.5523 18.4477 79 19 79H41C41.5523 79 42 78.5523 42 78V62C42 61.4477 41.5523 61 41 61Z" stroke="#8B65C9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M35 61V59C35 58.4696 34.7893 57.9609 34.4142 57.5858C34.0391 57.2107 33.5304 57 33 57H27C26.4696 57 25.9609 57.2107 25.5858 57.5858C25.2107 57.9609 25 58.4696 25 59V61" stroke="#8B65C9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M30 66.5V73.5" stroke="#8B65C9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M33.5 70H26.5" stroke="#8B65C9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="0.5" y="38.5" width="59" height="59" rx="7.5" stroke="black" stroke-opacity="0.12"/>
+<rect x="84" y="38" width="60" height="60" rx="8" fill="#FCFDFD"/>
+<path d="M114 79C114 79 101.5 72 101.5 63.5C101.5 61.9974 102.021 60.5411 102.973 59.3791C103.926 58.217 105.252 57.4209 106.725 57.1262C108.199 56.8315 109.729 57.0565 111.055 57.7627C112.381 58.469 113.422 59.613 114 61C114.578 59.613 115.619 58.469 116.945 57.7627C118.271 57.0565 119.801 56.8315 121.275 57.1262C122.748 57.4209 124.074 58.217 125.027 59.3791C125.979 60.5411 126.5 61.9974 126.5 63.5C126.5 72 114 79 114 79Z" stroke="#8B65C9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="84.5" y="38.5" width="59" height="59" rx="7.5" stroke="black" stroke-opacity="0.12"/>
+<rect x="168" y="38" width="60" height="60" rx="8" fill="#FCFDFD"/>
+<path d="M186 68H191L193 65L197 71L199 68H202" stroke="#8B65C9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M185.513 64C185.5 63.8375 185.5 63.6625 185.5 63.5C185.5 61.9974 186.021 60.5411 186.973 59.3791C187.926 58.217 189.252 57.4209 190.725 57.1262C192.199 56.8315 193.729 57.0565 195.055 57.7627C196.381 58.469 197.422 59.613 198 61C198.578 59.613 199.619 58.469 200.945 57.7627C202.271 57.0565 203.801 56.8315 205.275 57.1262C206.748 57.4209 208.074 58.217 209.027 59.3791C209.979 60.5411 210.5 61.9974 210.5 63.5C210.5 72 198 79 198 79C198 79 193.013 76.2 189.338 72" stroke="#8B65C9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="168.5" y="38.5" width="59" height="59" rx="7.5" stroke="black" stroke-opacity="0.12"/>
+<rect x="252" y="38" width="60" height="60" rx="8" fill="#FCFDFD"/>
+<path d="M284 57.9944L272.006 69.9887C269.794 72.2 269.793 75.7835 272.002 77.9927C274.211 80.2018 277.794 80.2001 280.006 77.9887L292 65.9944C294.211 63.7831 294.213 60.1996 292.004 57.9904C289.795 55.7813 286.211 55.783 284 57.9944Z" stroke="#8B65C9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M278 64L286 72" stroke="#8B65C9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M286.012 66.0125L289.062 63.0625" stroke="#8B65C9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="252.5" y="38.5" width="59" height="59" rx="7.5" stroke="black" stroke-opacity="0.12"/>
+<g opacity="0.9">
+<rect x="336" y="38" width="60" height="60" rx="8" fill="#FCFDFD"/>
+<path d="M366 73C368.209 73 370 71.2091 370 69C370 66.7909 368.209 65 366 65C363.791 65 362 66.7909 362 69C362 71.2091 363.791 73 366 73Z" stroke="#8B65C9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M360 76C360.699 75.0685 361.604 74.3125 362.646 73.7918C363.687 73.2711 364.836 73 366 73C367.164 73 368.313 73.2711 369.354 73.7918C370.396 74.3125 371.301 75.0685 372 76" stroke="#8B65C9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M376 79V57C376 56.4477 375.552 56 375 56H357C356.448 56 356 56.4477 356 57V79C356 79.5523 356.448 80 357 80H375C375.552 80 376 79.5523 376 79Z" stroke="#8B65C9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M362 60H370" stroke="#8B65C9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="336.5" y="38.5" width="59" height="59" rx="7.5" stroke="black" stroke-opacity="0.12"/>
+</g>
+</g>
+</svg>

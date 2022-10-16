@@ -29,7 +29,7 @@ export function MHSection() {
 
       <div className="Items-MH">
         {!!categories &&
-          categories?.map((category) => (
+          categories?.slice(0, 4).map((category) => (
             <WithScrollReveal delay={800} key={category.id}>
               <CategoryCard
                 title={category.nome}

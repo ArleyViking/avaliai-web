@@ -24,7 +24,7 @@ export function AISection() {
       <HeaderSectionChecklist
         title="Arquitetura da informação"
         subtitle={
-          "Um checklist de heurísticas sobre os aspectos de arquitetura da informação no seu software."
+          "Um checklist de heurísticas sobre aspectos da arquitetura e organização da informação."
         }
         icon={Layout}
         seeMoreLink={`/checklist/${checklistIdRoute}`}

@@ -5,6 +5,8 @@ import {
   FolderOpen,
   ListChecks,
   SquaresFour,
+  PaperPlaneTilt,
+  EnvelopeSimple,
 } from "phosphor-react";
 import "./styles.scss";
 import imgColaborations from "@/assets/img-colaborations-page.png";
@@ -16,7 +18,7 @@ export function Contribute() {
       <div className="header-contribute">
         <div className="content-wrapper-contribute">
           <div className="content-contribute">
-            <h2 className="title-contribute">Contribua cosnoco</h2>
+            <h2 className="title-contribute">Contribua conosco</h2>
             <p className="description-contribute">
               Para este acervo crescer e atinjir novos designers precisamos
               fornecer mais checklists e heurísticas
@@ -40,12 +42,12 @@ export function Contribute() {
           <div>
             <div className="update-button">
               <div className="container">
-                <CloudArrowUp size="32px" />
+                <EnvelopeSimple size="32px" />
               </div>
               <p>
-                <span>Solte seu arquivo</span> ou navegue
+                <span>Mande o documento por email</span> com o conteúdo
                 <br />
-                pelo seus diretórios.
+                que tiver e algum dado seu para contato.
               </p>
             </div>
             <p>

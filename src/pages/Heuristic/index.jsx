@@ -5,7 +5,7 @@ import {
   CaretRight,
   ListChecks,
 } from "phosphor-react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import useSWR from "swr";
 import { ItemVerCard } from "../../components/ItemVerCard/ItemVerCard";
 import { fetcher } from "../../services/fetcher";
@@ -23,13 +23,17 @@ export function Heuristic() {
 
   const itens = data?.itens;
 
+  console.log(itens?.[0].heuristica.categoria);
+
   return (
     <div className="Heuristic">
       <div className="header-heuristic">
         <div className="content-wrapper-heuristic">
           <div className="content-heuristic">
             <div className="back">
-              <Link to="/categoria">
+              <Link
+                to={`/checklist/categoria/${itens?.[0].heuristica.categoria}`}
+              >
                 <ArrowLeft size={24} /> Heurística
               </Link>
             </div>

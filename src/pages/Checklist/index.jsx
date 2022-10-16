@@ -1,17 +1,19 @@
 import { ArrowLeft, Folders } from "phosphor-react";
 import { Link } from "react-router-dom";
-import image from "../../assets/img-nielsen.svg";
+
 import "./styles.scss";
 import { useParams } from "react-router-dom";
 import { CategoryCard } from "../../components/CategoryCard";
 import useSWR from "swr";
 
 import { fetcher } from "../../services/fetcher";
+import { checklists as checklistsConstants } from "@/constants/checklist";
 
 export function Checklist() {
   const { id: checklistId } = useParams();
 
   const { data: categories } = useSWR(`/categoria/${checklistId}`, fetcher);
+  const image = checklistsConstants[checklistId];
 
   return (
     <div className="Checklist">

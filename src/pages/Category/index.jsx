@@ -2,8 +2,6 @@ import { ArrowLeft, CaretRight, Folders, FileText } from "phosphor-react";
 import { Link, useParams } from "react-router-dom";
 import { HeuristicCard } from "../../components/HeuristicCard";
 import "./styles.scss";
-import { WithScrollReveal } from "@/components/WithScrollReveal";
-
 import useSWR from "swr";
 
 import { fetcher } from "../../services/fetcher";

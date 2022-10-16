@@ -4,12 +4,8 @@ import "./styles.scss";
 import { CategoryCard } from "../../../components/CategoryCard";
 import { WithScrollReveal } from "@/components/WithScrollReveal";
 import useSWR from "swr";
-import { api } from "@/services/api";
+import { fetcher } from "@/services/fetcher";
 
-async function fetcher(url) {
-  const response = await api.get(url);
-  return response.data;
-}
 export function UXSection() {
   const { data: categories } = useSWR(
     "/categoria/633f8408fb49ad6a414ca748",
