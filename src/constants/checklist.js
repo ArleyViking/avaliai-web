@@ -2,7 +2,7 @@ import imagem from "@/assets/img-nielsen.svg";
 import imagem2 from "@/assets/imgtipos.svg";
 import imagem3 from "@/assets/imgdesingvisual.svg";
 import imagem4 from "@/assets/ux.svg";
-import imagem5 from "@/assets/ai.svg";
+import imagem5 from "@/assets/Ai.svg";
 import imagem6 from "@/assets/PE.svg";
 import imagem7 from "@/assets/MH.svg";
 import imagem8 from "@/assets/JM.svg";
