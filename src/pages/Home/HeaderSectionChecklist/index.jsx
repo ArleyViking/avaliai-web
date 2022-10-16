@@ -1,3 +1,4 @@
+import { AllCategoriesButton } from "../../../components/AllCategoriesButton";
 import "./styles.scss";
 
 export function HeaderSectionChecklist({
@@ -5,16 +6,20 @@ export function HeaderSectionChecklist({
   subtitle,
   icon: Icon,
   variant = "fill",
+  seeMoreLink,
 }) {
   return (
     <div className="text-section">
-      <div className="title-icon">
-        <div className="Icon">
-          <Icon weight={variant} />
+      <div>
+        <div className="title-icon">
+          <div className="Icon">
+            <Icon weight={variant} />
+          </div>
+          <h3 className="title">{title}</h3>
         </div>
-        <h3 className="title">{title}</h3>
+        <p className="subtitle">{subtitle}</p>
       </div>
-      <p className="subtitle">{subtitle}</p>
+      <AllCategoriesButton to={seeMoreLink} />
     </div>
   );
 }

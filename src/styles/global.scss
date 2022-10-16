@@ -8,13 +8,16 @@
   --background: #f1f2f3;
   --purple-100: #6c40ea;
   --purple-200: #5500df;
+  --toastify-color-progress-light: #5500df;
 
   //spaces
   --screenwidth: 1536px;
   --section-margin: 72px;
   --header-height: 60px;
 }
-
+.Toastify__progress-bar {
+  background-color: #5500df;
+}
 body {
   background-color: var(--background);
   overflow-x: hidden;

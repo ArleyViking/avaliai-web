@@ -1,5 +1,5 @@
 import { ArrowLeft, CaretRight, Folders, FileText } from "phosphor-react";
-import { Link, useParams, useNavigate } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { HeuristicCard } from "../../components/HeuristicCard";
 import "./styles.scss";
 import { WithScrollReveal } from "@/components/WithScrollReveal";
@@ -53,15 +53,13 @@ export function Category() {
       <div className="heuristiclist">
         {!!heuristics &&
           heuristics?.map((heuristic) => (
-            <WithScrollReveal delay={400} key={heuristic._id}>
-              <Link to={`/checklist/categoria/heuristica/${heuristic._id}`}>
-                <HeuristicCard
-                  title={heuristic.nome}
-                  description={heuristic.descricao}
-                  num_itens={heuristic.num_itens}
-                />
-              </Link>
-            </WithScrollReveal>
+            <Link to={`/checklist/categoria/heuristica/${heuristic._id}`}>
+              <HeuristicCard
+                title={heuristic.nome}
+                description={heuristic.descricao}
+                num_itens={heuristic.num_itens}
+              />
+            </Link>
           ))}
       </div>
     </div>

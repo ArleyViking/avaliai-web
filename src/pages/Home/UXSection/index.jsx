@@ -15,6 +15,7 @@ export function UXSection() {
     "/categoria/633f8408fb49ad6a414ca748",
     fetcher
   );
+  const checklistIdRoute = categories?.[0].id_check._id;
 
   return (
     <section className="UXSection">
@@ -25,11 +26,12 @@ export function UXSection() {
         }
         icon={Smiley}
         variant={"regular"}
+        seeMoreLink={`/checklist/${checklistIdRoute}`}
       />
 
       <div className="Items-UX">
         {!!categories &&
-          categories?.map((category) => (
+          categories?.slice(0, 4).map((category) => (
             <WithScrollReveal delay={800} key={category.id}>
               <CategoryCard
                 title={category.nome}

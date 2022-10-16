@@ -1,0 +1,26 @@
+.AllCatetoriesButton {
+  overflow: hidden;
+  a {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 290%;
+    /* or 46px */
+
+    letter-spacing: 0.01em;
+
+    color: var(--purple-100);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    transform: translateX(20px);
+    transition: transform 150ms;
+    &:hover {
+      transform: translateX(0);
+      color: var(--purple-200);
+    }
+  }
+}

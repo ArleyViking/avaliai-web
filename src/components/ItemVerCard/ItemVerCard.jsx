@@ -2,12 +2,21 @@ import { Copy } from "phosphor-react";
 import "./styles.scss";
 import { Checkbox } from "@mui/material";
 import { useState } from "react";
+import { CopyToClipboard } from "react-copy-to-clipboard";
+import { toast } from "react-toastify";
 
-export function ItemVerCard({ ask }) {
+export function ItemVerCard({ ask, id }) {
   const [checked, setChecked] = useState(false);
 
   const handleChange = (event) => {
     setChecked(event.target.checked);
+  };
+
+  const notify = (result) => {
+    if (result) toast("Item copiado com sucesso!", { className: "toast" });
+    else toast("Item não copiado!", { className: "toast" });
+
+    console.log(result);
   };
 
   return (
@@ -16,7 +25,7 @@ export function ItemVerCard({ ask }) {
         <Checkbox
           checked={checked}
           onChange={handleChange}
-          id="checkbox"
+          id={id}
           sx={{
             color: "rgba(9, 3, 28, 0.4)",
             "&.Mui-checked": {
@@ -30,12 +39,16 @@ export function ItemVerCard({ ask }) {
               ? { textDecorationLine: "line-through", color: "#6c40ea" }
               : {}
           }
-          htmlFor="checkbox"
+          htmlFor={id}
         >
           {ask}
         </label>
       </div>
-      <Copy weight="fill" size={24} />
+      <CopyToClipboard text={ask} onCopy={(_, result) => notify(result)}>
+        <button>
+          <Copy weight="fill" size={24} />
+        </button>
+      </CopyToClipboard>
     </div>
   );
 }

@@ -1,6 +1,9 @@
 .text-section {
   max-width: var(--screenwidth);
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   .title-icon {
     display: flex;

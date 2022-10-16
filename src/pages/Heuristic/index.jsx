@@ -5,12 +5,24 @@ import {
   CaretRight,
   ListChecks,
 } from "phosphor-react";
-import { Link } from "react-router-dom";
-import { HeuristicCard } from "../../components/HeuristicCard";
+import { Link, useParams } from "react-router-dom";
+import useSWR from "swr";
 import { ItemVerCard } from "../../components/ItemVerCard/ItemVerCard";
+import { fetcher } from "../../services/fetcher";
 import "./styles.scss";
 
 export function Heuristic() {
+  const { id: heuristicId } = useParams();
+
+  const { data } = useSWR(
+    `/itensverificacao/${heuristicId}?pagina=0&tam_pagina=10`,
+    fetcher
+  );
+
+  const count = data?.count;
+
+  const itens = data?.itens;
+
   return (
     <div className="Heuristic">
       <div className="header-heuristic">
@@ -22,14 +34,12 @@ export function Heuristic() {
               </Link>
             </div>
             <div>
-              <h2 className="title-heuristic">Mudança de comportamento</h2>
+              <h2 className="title-heuristic">{itens?.[0].heuristica.nome}</h2>
               <p className="description-heuristic">
-                O feedback sobre o desempenho deve ser dado fornecendo dados
-                sobre o comportamento registrado ou avaliando o desempenho em
-                relação a um padrão definido.
+                {itens?.[0].heuristica.descricao}
               </p>
               <div className="datas">
-                <p> 40 Itens de verificação</p>
+                <p> {count} Itens de verificação</p>
                 <p>
                   Fonte utilizada: <a href="#">Artigo acadêmico</a>
                 </p>
@@ -54,11 +64,14 @@ export function Heuristic() {
       </div>
 
       <div className="heuristiclist">
-        <ItemVerCard
-          ask={
-            "Existe alguma forma de feedback do sistema para cada ação do operador?"
-          }
-        />
+        {!!itens &&
+          itens?.map((item, i) => (
+            <ItemVerCard
+              key={item._id}
+              ask={item.pergunta}
+              id={`checkbox-${item._id}`}
+            />
+          ))}
       </div>
     </div>
   );

@@ -5,8 +5,17 @@ import { UserCircle } from "phosphor-react";
 
 import { CategoryCard } from "../../../components/CategoryCard";
 import { WithScrollReveal } from "@/components/WithScrollReveal";
+import { fetcher } from "../../../services/fetcher";
+import useSWR from "swr";
 
 export function PESection() {
+  const { data: categories } = useSWR(
+    "/categoria/633f844afb49ad6a414ca74a",
+    fetcher
+  );
+
+  const checklistIdRoute = categories?.[0].id_check._id;
+
   return (
     <section className="PESection">
       <HeaderSectionChecklist
@@ -15,21 +24,20 @@ export function PESection() {
           "Um checklist de heurísticas que levam em consideração caracteristicas de público específicos."
         }
         icon={UserCircle}
+        seeMoreLink={`/checklist/${checklistIdRoute}`}
       />
 
       <div className="Items-PE">
-        <WithScrollReveal delay={800}>
-          <CategoryCard title="Usuários idosos" />
-        </WithScrollReveal>
-        <WithScrollReveal delay={1200}>
-          <CategoryCard title="Deficiêntes visuais" />
-        </WithScrollReveal>
-        <WithScrollReveal delay={1600}>
-          <CategoryCard title="Usuários de jogos digitais" />
-        </WithScrollReveal>
-        <WithScrollReveal delay={2000}>
-          <CategoryCard title="Aplicativos da área da saúde" />
-        </WithScrollReveal>
+        {!!categories &&
+          categories?.map((category) => (
+            <WithScrollReveal delay={800} key={category.id}>
+              <CategoryCard
+                title={category.nome}
+                num_heu={category.num_heu}
+                num_itens={category.num_itens}
+              />
+            </WithScrollReveal>
+          ))}
       </div>
     </section>
   );

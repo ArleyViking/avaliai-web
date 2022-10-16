@@ -25,4 +25,13 @@
     outline: 1px solid rgba(9, 3, 28, 0.04);
     background-color: rgba(255, 255, 255);
   }
+
+  button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    > svg {
+      color: var(--purple-100);
+    }
+  }
 }

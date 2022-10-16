@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import image from "../../assets/img-nielsen.svg";
 import "./styles.scss";
 import { useParams } from "react-router-dom";
-import { WithScrollReveal } from "@/components/WithScrollReveal";
 import { CategoryCard } from "../../components/CategoryCard";
 import useSWR from "swr";
 
@@ -60,15 +59,13 @@ export function Checklist() {
       <div className="categorylist">
         {!!categories &&
           categories?.map((category) => (
-            <WithScrollReveal delay={800} key={category.id}>
-              <Link to={`/checklist/categoria/${category.id}`}>
-                <CategoryCard
-                  title={category.nome}
-                  num_heu={category.num_heu}
-                  num_itens={category.num_itens}
-                />
-              </Link>
-            </WithScrollReveal>
+            <Link to={`/checklist/categoria/${category.id}`} key={category.id}>
+              <CategoryCard
+                title={category.nome}
+                num_heu={category.num_heu}
+                num_itens={category.num_itens}
+              />
+            </Link>
           ))}
       </div>
     </div>
