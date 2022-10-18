@@ -38,10 +38,16 @@
   display: flex;
   margin-bottom: 32px;
   justify-content: space-between;
-  flex-wrap: wrap;
   gap: 1rem;
 
   a {
     text-decoration: none;
+  }
+}
+
+@media (max-width: 1366px) {
+  .Recommendation {
+    margin-left: 40px;
+    margin-right: 40px;
   }
 }

@@ -31,3 +31,9 @@
     }
   }
 }
+
+@media (max-width: 1366px) {
+  .MiniDash {
+    width: calc(100% - 32px * 2);
+  }
+}

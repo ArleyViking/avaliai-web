@@ -9,8 +9,8 @@ export function BannerAbout() {
       <div className="About">
         <div className="text">
           <h3 className="title">
-            Conheça um pouco mais sobre esse projeto e <br /> como você pode
-            usufruir dele.{" "}
+            Conheça um pouco mais sobre esse projeto e como você pode usufruir
+            dele.
           </h3>
           <Link to="/sobreoacervo">Conhecer o acervo</Link>
         </div>

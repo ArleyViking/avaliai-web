@@ -19,12 +19,13 @@ export function Home() {
       <RecommendationSection />
       <BannerAbout />
       <UXSection />
-      <AISection />
+      <PESection />
       <Colaboration
         title="Torne esse projeto colaborativo"
         subtitle="Você conhece algum conteúdo que esteja relacionado com heurística ou boas práticas de design de interface que possa virar listas de verificações?"
       />
-      <PESection />
+
+      <AISection />
       <MHSection />
       <JMSection />
     </>

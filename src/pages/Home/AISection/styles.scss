@@ -6,10 +6,18 @@
 .Items-AI {
   margin-top: 2rem;
   display: grid;
-  grid-template-columns: repeat(4, minmax(366px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(366px, 1fr));
   gap: 1rem;
+  flex-wrap: wrap;
 
   a {
     text-decoration: none;
+  }
+}
+
+@media (max-width: 1366px) {
+  .AISection {
+    margin-left: 40px;
+    margin-right: 40px;
   }
 }

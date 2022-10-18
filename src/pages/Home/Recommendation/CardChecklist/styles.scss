@@ -11,10 +11,12 @@
   transition: outline 200ms, background-color 100ms;
   outline-color: #fcfcfc;
   height: 100%;
+
   .Imagem {
-    width: 40vh;
+    width: 18vw;
     pointer-events: none;
   }
+
   .text {
     display: flex;
 
@@ -47,6 +49,25 @@
     background-color: rgba(255, 255, 255);
     .title-card {
       color: var(--purple-200);
+    }
+  }
+}
+
+@media (max-width: 1366px) {
+  .CardChecklist {
+    padding: 32px 32px 8px;
+    gap: 24px;
+
+    .Imagem {
+      width: 22vw;
+    }
+    .text {
+      .title-card {
+        font-size: 18px;
+      }
+      .descrition-card {
+        font-size: 14px;
+      }
     }
   }
 }

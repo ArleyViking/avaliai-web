@@ -14,10 +14,15 @@
   --screenwidth: 1536px;
   --section-margin: 72px;
   --header-height: 60px;
+
+  //breakpoint
+  --large: 1366px;
+  --small: 375px;
 }
 .Toastify__progress-bar {
   background-color: #5500df;
 }
+
 body {
   background-color: var(--background);
   overflow-x: hidden;
