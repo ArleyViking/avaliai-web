@@ -11,7 +11,7 @@ export function MiniDash() {
     <div className="MiniDash">
       {!!datas &&
         datas?.map((data) => (
-          <WithScrollReveal delay={800} key={data.nome}>
+          <WithScrollReveal delay={500} key={data.nome}>
             <DashItem
               value={String(data.quant).padStart(2, "0")}
               label={data.nome}

@@ -15,6 +15,9 @@ export function Checklist() {
   const { data: categories } = useSWR(`/categoria/${checklistId}`, fetcher);
   const image = checklistsConstants[checklistId];
 
+  const { data: dates } = useSWR(`/dados_checklist/${checklistId}`, fetcher);
+  console.log(dates);
+
   return (
     <div className="Checklist">
       <div className="header-checklist">
@@ -34,15 +37,17 @@ export function Checklist() {
                   {categories?.[0].id_check.descricao}
                 </p>
                 <div className="datas">
-                  <p> {categories?.[0].id_check.num_cat} Categorias</p>
                   <p>
                     {" "}
-                    {categories?.[0].id_check.num_heu} Heurísticas no total
+                    {dates?.[0].quant} {dates?.[0].nome}
                   </p>
                   <p>
                     {" "}
-                    {categories?.[0].id_check.num_itens} Itens de verificação no
-                    total
+                    {dates?.[1].quant} {dates?.[1].nome}
+                  </p>
+                  <p>
+                    {" "}
+                    {dates?.[2].quant} {dates?.[2].nome}
                   </p>
                 </div>
               </div>

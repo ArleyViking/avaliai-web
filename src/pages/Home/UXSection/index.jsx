@@ -5,6 +5,7 @@ import { CategoryCard } from "../../../components/CategoryCard";
 import { WithScrollReveal } from "@/components/WithScrollReveal";
 import useSWR from "swr";
 import { fetcher } from "@/services/fetcher";
+import { Link } from "react-router-dom";
 
 export function UXSection() {
   const { data: categories } = useSWR(
@@ -28,12 +29,17 @@ export function UXSection() {
       <div className="Items-UX">
         {!!categories &&
           categories?.slice(0, 4).map((category) => (
-            <WithScrollReveal delay={800} key={category.id}>
-              <CategoryCard
-                title={category.nome}
-                num_heu={category.num_heu}
-                num_itens={category.num_itens}
-              />
+            <WithScrollReveal delay={500} key={category.id}>
+              <Link
+                to={`/checklist/categoria/${category.id}`}
+                key={category.id}
+              >
+                <CategoryCard
+                  title={category.nome}
+                  num_heu={category.num_heu}
+                  num_itens={category.num_itens}
+                />
+              </Link>
             </WithScrollReveal>
           ))}
       </div>

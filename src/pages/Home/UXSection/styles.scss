@@ -8,4 +8,7 @@
   display: grid;
   grid-template-columns: repeat(4, minmax(366px, 1fr));
   gap: 1rem;
+  a {
+    text-decoration: none;
+  }
 }

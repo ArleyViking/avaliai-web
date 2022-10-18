@@ -23,7 +23,8 @@ export function Heuristic() {
 
   const itens = data?.itens;
 
-  console.log(itens?.[0].heuristica.categoria);
+  const heuristica = itens?.[0]?.heuristica;
+  console.log();
 
   return (
     <div className="Heuristic">
@@ -31,17 +32,13 @@ export function Heuristic() {
         <div className="content-wrapper-heuristic">
           <div className="content-heuristic">
             <div className="back">
-              <Link
-                to={`/checklist/categoria/${itens?.[0].heuristica.categoria}`}
-              >
+              <Link to={`/checklist/categoria/${heuristica?.categoria}`}>
                 <ArrowLeft size={24} /> Heurística
               </Link>
             </div>
             <div>
-              <h2 className="title-heuristic">{itens?.[0].heuristica.nome}</h2>
-              <p className="description-heuristic">
-                {itens?.[0].heuristica.descricao}
-              </p>
+              <h2 className="title-heuristic">{heuristica?.nome}</h2>
+              <p className="description-heuristic">{heuristica?.descricao}</p>
               <div className="datas">
                 <p> {count} Itens de verificação</p>
                 <p>

@@ -10,8 +10,10 @@ export function Category() {
   const { id: categoryId } = useParams();
 
   const { data: heuristics } = useSWR(`/heuristicas/${categoryId}`, fetcher);
-  console.log(heuristics);
 
+  const { id } = useParams();
+  const { data: dates } = useSWR(`/dados_categoria/${id}`, fetcher);
+  console.log(dates);
   return (
     <div className="Category">
       <div className="header-category">
@@ -27,10 +29,12 @@ export function Category() {
                 {heuristics?.[0].categoria.nome}
               </h2>
               <div className="datas">
-                <p> {heuristics?.[0].categoria.num_heu} Heurísticas no total</p>
                 <p>
                   {" "}
-                  {heuristics?.[0].categoria.num_itens} Itens de verificação
+                  {dates?.[0].quant} {dates?.[0].nome}
+                </p>
+                <p>
+                  {dates?.[1].quant} {dates?.[1].nome}{" "}
                 </p>
               </div>
             </div>

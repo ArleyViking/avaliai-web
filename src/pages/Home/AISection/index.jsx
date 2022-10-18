@@ -7,6 +7,7 @@ import { CategoryCard } from "../../../components/CategoryCard";
 import { WithScrollReveal } from "@/components/WithScrollReveal";
 import useSWR from "swr";
 import { api } from "@/services/api";
+import { Link } from "react-router-dom";
 
 async function fetcher(url) {
   const response = await api.get(url);
@@ -33,12 +34,17 @@ export function AISection() {
       <div className="Items-AI">
         {!!categories &&
           categories?.map((category) => (
-            <WithScrollReveal delay={800} key={category.id}>
-              <CategoryCard
-                title={category.nome}
-                num_heu={category.num_heu}
-                num_itens={category.num_itens}
-              />
+            <WithScrollReveal delay={500} key={category.id}>
+              <Link
+                to={`/checklist/categoria/${category.id}`}
+                key={category.id}
+              >
+                <CategoryCard
+                  title={category.nome}
+                  num_heu={category.num_heu}
+                  num_itens={category.num_itens}
+                />
+              </Link>
             </WithScrollReveal>
           ))}
       </div>
