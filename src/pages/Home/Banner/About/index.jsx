@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 export function BannerAbout() {
   return (
-    <WithScrollReveal delay={1400}>
+    <WithScrollReveal delay={600}>
       <div className="About">
         <div className="text">
           <h3 className="title">

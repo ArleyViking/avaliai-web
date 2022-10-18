@@ -127,3 +127,22 @@
     margin-bottom: 48px;
   }
 }
+
+@media (max-width: 1366px) {
+  .Checklist {
+    .header-checklist {
+      .content-all {
+        margin-left: 32px;
+        margin-right: 32px;
+      }
+    }
+    .breadcrumb {
+      margin-left: 32px;
+    }
+    .categorylist {
+      margin-left: 32px;
+      margin-right: 32px;
+      width: auto;
+    }
+  }
+}

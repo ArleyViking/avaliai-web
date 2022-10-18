@@ -47,10 +47,24 @@
       gap: inherit;
     }
   }
+}
 
-  @media (max-width: 768px) {
-    .row2 {
-      flex-direction: column;
+@media (max-width: 1366px) {
+  .header {
+    .content-about {
+      margin-left: 32px;
     }
+    .DescriptionPages {
+      margin: 48px 32px;
+    }
+    .Colaboration {
+      margin: 0 32px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .row2 {
+    flex-direction: column;
   }
 }

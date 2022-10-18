@@ -34,8 +34,8 @@ export function Contribute() {
             <h5>
               Para isso, precisamos da <span>colaboração</span> de
               <br />
-              <span>designers</span> que possam nos ajudar a encontrar
-              <br /> esse conteúdo.
+              <span>designers</span> que possam nos ajudar a encontrar esse
+              conteúdo.
             </h5>
             <p>Caso você seja um deles, por favor envie seu conteúdo.</p>
           </div>
@@ -50,7 +50,7 @@ export function Contribute() {
                 que tiver e algum dado seu para contato.
               </p>
             </div>
-            <p>
+            <p className="pfvr">
               Por favor siga as instruções abaixo para organizar o documento.
             </p>
           </div>

@@ -127,7 +127,7 @@
     }
   }
 
-  .heuristiclist {
+  .itenslist {
     margin: 24px auto;
     width: 100%;
     max-width: var(--screenwidth);
@@ -147,6 +147,25 @@
       flex-direction: column;
       gap: 24px;
       flex: 1;
+    }
+  }
+}
+
+@media (max-width: 1366px) {
+  .Heuristic {
+    .header-heuristic {
+      .content-heuristic {
+        margin-left: 32px;
+        margin-right: 32px;
+      }
+    }
+    .breadcrumb {
+      margin-left: 32px;
+    }
+    .itenslist {
+      margin-left: 32px;
+      margin-right: 32px;
+      width: auto;
     }
   }
 }

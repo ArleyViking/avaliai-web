@@ -141,3 +141,22 @@
     }
   }
 }
+
+@media (max-width: 1366px) {
+  .Category {
+    .header-category {
+      .content-category {
+        margin-left: 32px;
+        margin-right: 32px;
+      }
+    }
+    .breadcrumb {
+      margin-left: 32px;
+    }
+    .heuristiclist {
+      margin-left: 32px;
+      margin-right: 32px;
+      width: auto;
+    }
+  }
+}

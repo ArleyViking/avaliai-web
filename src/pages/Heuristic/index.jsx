@@ -64,7 +64,7 @@ export function Heuristic() {
         </div>
       </div>
 
-      <div className="heuristiclist">
+      <div className="itenslist">
         {!!itens &&
           itens?.map((item, i) => (
             <ItemVerCard

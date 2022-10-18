@@ -11,7 +11,7 @@ export function DescriptionProject({ title, paragraphs, image }) {
           </p>
         ))}
       </article>
-      <img src={image} />
+      <img src={image} className="Imagem" />
     </div>
   );
 }
