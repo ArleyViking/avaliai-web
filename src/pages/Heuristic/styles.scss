@@ -126,7 +126,12 @@
       }
     }
   }
-
+  .loading {
+    font-size: 16px;
+    margin: 24px 0;
+    color: rgba(9, 3, 28, 0.6);
+    font-weight: 400;
+  }
   .itenslist {
     margin: 24px auto;
     width: 100%;

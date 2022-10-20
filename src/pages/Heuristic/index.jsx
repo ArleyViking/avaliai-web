@@ -100,7 +100,9 @@ export function Heuristic() {
             </WithScrollReveal>
           ))}
         {hasMore && (
-          <p ref={instanceRef}>Carregando mais itens de verificação...</p>
+          <p ref={instanceRef} className="loading">
+            Carregando itens de verificação...
+          </p>
         )}
       </div>
     </div>
