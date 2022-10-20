@@ -4,12 +4,15 @@ import { HeuristicCard } from "../../components/HeuristicCard";
 import "./styles.scss";
 import useSWR from "swr";
 
-import { fetcher } from "../../services/fetcher";
+import { fetcher, fetcher2 } from "../../services/fetcher";
 
 export function Category() {
   const { id: categoryId } = useParams();
 
-  const { data: heuristics } = useSWR(`/heuristicas/${categoryId}`, fetcher);
+  const { data: heuristics } = useSWR(
+    { url: `/heuristicas/${categoryId}` },
+    fetcher2
+  );
 
   const { id } = useParams();
   const { data: dates } = useSWR(`/dados_categoria/${id}`, fetcher);

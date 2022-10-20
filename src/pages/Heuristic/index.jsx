@@ -5,19 +5,26 @@ import {
   CaretRight,
   ListChecks,
 } from "phosphor-react";
+import { useEffect, useState } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import useSWR from "swr";
 import { ItemVerCard } from "../../components/ItemVerCard/ItemVerCard";
+import { useIntersection } from "../../hooks/useIntersection";
 import { fetcher } from "../../services/fetcher";
 import "./styles.scss";
 
+import { WithScrollReveal } from "@/components/WithScrollReveal";
+
 export function Heuristic() {
+  const [data, setData] = useState({});
+
+  const [hasMore, setHasMore] = useState(true);
+
   const { id: heuristicId } = useParams();
 
-  const { data } = useSWR(
-    `/itensverificacao/${heuristicId}?pagina=0&tam_pagina=10`,
-    fetcher
-  );
+  const [page, setPage] = useState(0);
+
+  const [visible, instanceRef] = useIntersection();
 
   const count = data?.count;
 
@@ -25,6 +32,27 @@ export function Heuristic() {
 
   const heuristica = itens?.[0]?.heuristica;
   console.log();
+
+  useEffect(() => {
+    fetcher(
+      `/itensverificacao/${heuristicId}?pagina=${page}&tam_pagina=10`
+    ).then((data) => {
+      if (data.itens.length === 0) {
+        setHasMore(false);
+        return;
+      }
+      setData((oldData) => ({
+        ...oldData,
+        itens: [...(oldData?.itens ?? []), ...data.itens],
+      }));
+    });
+  }, [page]);
+
+  useEffect(() => {
+    if (visible) {
+      setPage((oldPage) => oldPage + 1);
+    }
+  }, [visible]);
 
   return (
     <div className="Heuristic">
@@ -67,12 +95,13 @@ export function Heuristic() {
       <div className="itenslist">
         {!!itens &&
           itens?.map((item, i) => (
-            <ItemVerCard
-              key={item._id}
-              ask={item.pergunta}
-              id={`checkbox-${item._id}`}
-            />
+            <WithScrollReveal key={item._id} delay={100}>
+              <ItemVerCard ask={item.pergunta} id={`checkbox-${item._id}`} />
+            </WithScrollReveal>
           ))}
+        {hasMore && (
+          <p ref={instanceRef}>Carregando mais itens de verificação...</p>
+        )}
       </div>
     </div>
   );
