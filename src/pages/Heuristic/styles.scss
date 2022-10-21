@@ -95,7 +95,7 @@
   .breadcrumb {
     margin: 0 auto;
     margin-top: 48px;
-    max-width: 1540px;
+    max-width: var(--screenwidth);
     display: flex;
     align-items: center;
     gap: 8px;
@@ -110,6 +110,7 @@
       color: rgba(9, 3, 28, 0.87);
       letter-spacing: 0.01em;
     }
+
     .item {
       display: flex;
       align-items: center;
@@ -126,12 +127,16 @@
       }
     }
   }
+
   .loading {
-    font-size: 16px;
+    font-size: 18px;
     margin: 24px 0;
-    color: rgba(9, 3, 28, 0.6);
-    font-weight: 400;
+    color: rgba(9, 3, 28);
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
   }
+
   .itenslist {
     margin: 24px auto;
     width: 100%;

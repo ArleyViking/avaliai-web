@@ -70,7 +70,10 @@ export function Heuristic() {
               <div className="datas">
                 <p> {count} Itens de verificação</p>
                 <p>
-                  Fonte utilizada: <a href="#">Artigo acadêmico</a>
+                  Fonte utilizada:{" "}
+                  <a target="_blank" href={heuristica?.fonte}>
+                    Artigo acadêmico
+                  </a>
                 </p>
               </div>
             </div>

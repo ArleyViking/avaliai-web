@@ -16,7 +16,6 @@ export function Checklist() {
   const image = checklistsConstants[checklistId];
 
   const { data: dates } = useSWR(`/dados_checklist/${checklistId}`, fetcher);
-  console.log(dates);
 
   return (
     <div className="Checklist">
