@@ -31,7 +31,6 @@ export function Heuristic() {
   const itens = data?.itens;
 
   const heuristica = itens?.[0]?.heuristica;
-  console.log();
 
   useEffect(() => {
     fetcher(
@@ -53,6 +52,9 @@ export function Heuristic() {
       setPage((oldPage) => oldPage + 1);
     }
   }, [visible]);
+
+  const checklistId = heuristica?.checklist;
+  const categoryId = heuristica?.categoria;
 
   return (
     <div className="Heuristic">
@@ -82,13 +84,17 @@ export function Heuristic() {
       </div>
 
       <div className="breadcrumb">
-        <div className="item">
-          <Folders size={24} /> <p>Lista de categorias</p>
-        </div>
+        <Link to={`/checklist/${checklistId}`}>
+          <div className="item">
+            <Folders size={24} /> <p>Lista de categorias</p>
+          </div>
+        </Link>
         <CaretRight weight="bold" />
-        <div className="item">
-          <FileText size={24} /> <p>Lista de heurísticas</p>
-        </div>
+        <Link to={`/checklist/categoria/${categoryId}`} key={categoryId}>
+          <div className="item">
+            <FileText size={24} /> <p>Lista de heurísticas</p>
+          </div>
+        </Link>
         <CaretRight weight="bold" />
         <div className="item">
           <ListChecks size={24} /> <p>Lista de itens de verificação</p>
@@ -104,7 +110,7 @@ export function Heuristic() {
           ))}
         {hasMore && (
           <p ref={instanceRef} className="loading">
-            Carregando itens de verificação...
+            Carregando itens de verificação
           </p>
         )}
       </div>

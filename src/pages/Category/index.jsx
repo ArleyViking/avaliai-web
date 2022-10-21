@@ -13,11 +13,10 @@ export function Category() {
     { url: `/heuristicas/${categoryId}` },
     fetcher2
   );
-  //const { data: categories } = useSWR(`/categoria/${checklistId}`, fetcher);
+
   const { id } = useParams();
   const { data: dates } = useSWR(`/dados_categoria/${id}`, fetcher);
-
-  const checklistId = heuristics[0].checklist;
+  const checklistId = heuristics?.[0].checklist;
 
   return (
     <div className="Category">
@@ -48,9 +47,11 @@ export function Category() {
       </div>
 
       <div className="breadcrumb">
-        <div className="item">
-          <Folders size={24} /> <p>Lista de categorias</p>
-        </div>
+        <Link to={`/checklist/${checklistId}`}>
+          <div className="item">
+            <Folders size={24} /> <p>Lista de categorias</p>
+          </div>
+        </Link>
         <CaretRight weight="bold" />
         <div className="item">
           <FileText size={24} /> <p>Lista de heurísticas</p>
