@@ -1,4 +1,4 @@
-import { Copy } from "phosphor-react";
+import { Clipboard } from "phosphor-react";
 import "./styles.scss";
 import { Checkbox } from "@mui/material";
 import { useState } from "react";
@@ -46,7 +46,7 @@ export function ItemVerCard({ ask, id }) {
       </div>
       <CopyToClipboard text={ask} onCopy={(_, result) => notify(result)}>
         <button>
-          <Copy weight="fill" size={24} />
+          <Clipboard size={24} />
         </button>
       </CopyToClipboard>
     </div>

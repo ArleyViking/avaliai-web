@@ -26,8 +26,8 @@ export function Heuristic() {
 
   const [visible, instanceRef] = useIntersection();
 
-  const count = data?.count;
-
+  const count = data?.itens?.length;
+  console.log("dados:", data?.itens);
   const itens = data?.itens;
 
   const heuristica = itens?.[0]?.heuristica;
@@ -105,7 +105,11 @@ export function Heuristic() {
         {!!itens &&
           itens?.map((item, i) => (
             <WithScrollReveal key={item._id} delay={100}>
-              <ItemVerCard ask={item.pergunta} id={`checkbox-${item._id}`} />
+              <ItemVerCard
+                ask={item.pergunta}
+                id={`checkbox-${item._id}`}
+                key={item.id}
+              />
             </WithScrollReveal>
           ))}
         {hasMore && (

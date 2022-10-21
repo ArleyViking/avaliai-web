@@ -34,5 +34,8 @@
     > svg {
       color: var(--purple-100);
     }
+    :hover {
+      color: var(--purple-200) !important;
+    }
   }
 }
