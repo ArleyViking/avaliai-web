@@ -27,14 +27,21 @@ export function Heuristic() {
   const [visible, instanceRef] = useIntersection();
 
   const count = data?.itens?.length;
-  console.log("dados:", data?.itens);
+
   const itens = data?.itens;
 
   const heuristica = itens?.[0]?.heuristica;
 
+  const { data: dates } = useSWR(
+    `/itensverificacao/${heuristicId}?pagina=${page}&tam_pagina=15`,
+    fetcher
+  );
+
+  const count_all = dates?.count;
+
   useEffect(() => {
     fetcher(
-      `/itensverificacao/${heuristicId}?pagina=${page}&tam_pagina=10`
+      `/itensverificacao/${heuristicId}?pagina=${page}&tam_pagina=15`
     ).then((data) => {
       if (data.itens.length === 0) {
         setHasMore(false);
@@ -70,7 +77,7 @@ export function Heuristic() {
               <h2 className="title-heuristic">{heuristica?.nome}</h2>
               <p className="description-heuristic">{heuristica?.descricao}</p>
               <div className="datas">
-                <p> {count} Itens de verificação</p>
+                <p> {count_all} Itens de verificação</p>
                 <p>
                   Fonte utilizada:{" "}
                   <a target="_blank" href={heuristica?.fonte}>
@@ -103,7 +110,7 @@ export function Heuristic() {
 
       <div className="itenslist">
         {!!itens &&
-          itens?.map((item, i) => (
+          itens?.slice(0, count_all)?.map((item, i) => (
             <WithScrollReveal key={item._id} delay={100}>
               <ItemVerCard
                 ask={item.pergunta}
