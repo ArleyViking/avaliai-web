@@ -74,7 +74,7 @@ export function Heuristic() {
                 <p>
                   Fonte utilizada:{" "}
                   <a target="_blank" href={heuristica?.fonte}>
-                    Artigo acadêmico
+                    {heuristica?.tipo_fonte}
                   </a>
                 </p>
               </div>

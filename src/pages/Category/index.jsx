@@ -66,6 +66,7 @@ export function Category() {
                 title={heuristic.nome}
                 description={heuristic.descricao}
                 num_itens={heuristic.num_itens}
+                tipo_fonte={heuristic.tipo_fonte}
               />
             </Link>
           ))}
