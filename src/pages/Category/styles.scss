@@ -98,9 +98,10 @@
       font-size: 18px;
       line-height: 120%;
       /* identical to box height, or 22px */
-      color: rgba(9, 3, 28, 0.87);
+      color: #09031cde;
       letter-spacing: 0.01em;
     }
+
     .item {
       display: flex;
       align-items: center;
@@ -113,11 +114,14 @@
 
     :not(:last-child) {
       p {
-        color: rgba(9, 3, 28, 0.6);
+        color: hsl(256, 13%, 35%);
       }
 
       svg {
-        color: rgba(9, 3, 28, 0.6);
+        color: hsl(256, 13%, 35%);
+      }
+      :hover {
+        color: hsl(256, 13%, 24%);
       }
     }
   }
