@@ -101,6 +101,10 @@
     align-items: center;
     gap: 8px;
 
+    button {
+      border: none;
+      cursor: pointer;
+    }
     p {
       font-family: "Inter";
       font-style: normal;

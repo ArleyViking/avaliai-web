@@ -13,7 +13,6 @@ import { useIntersection } from "../../hooks/useIntersection";
 import { fetcher } from "../../services/fetcher";
 import "./styles.scss";
 import emptyState from "@/assets/empty.png";
-
 import { WithScrollReveal } from "@/components/WithScrollReveal";
 
 export function Heuristic() {
@@ -144,9 +143,9 @@ export function Heuristic() {
           <div className="content-wrapper-heuristic">
             <div className="content-heuristic">
               <div className="back">
-                <Link to={`/checklist/categoria/${categoria}`}>
+                <a href="javascript:history.back()">
                   <ArrowLeft size={24} /> Heurística
-                </Link>
+                </a>
               </div>
               <div>
                 <h2 className="title-heuristic">{heuristica_data?.nome}</h2>
@@ -169,37 +168,41 @@ export function Heuristic() {
 
         <div className="breadcrumb">
           <Link to={`/checklist/${checklist}`}>
-            <div className="item">
+            <button
+              onclick="location.href = document.referrer;"
+              className="item"
+            >
               <Folders size={24} /> <p>Lista de categorias</p>
-            </div>
+            </button>
           </Link>
           <CaretRight weight="bold" />
-          <Link to={`/checklist/categoria/${categoria}`}>
+          <a href="javascript:history.back()">
             <div className="item">
               <FileText size={24} /> <p>Lista de heurísticas</p>
             </div>
-          </Link>
+          </a>
           <CaretRight weight="bold" />
           <div className="item">
             <ListChecks size={24} /> <p>Lista de itens de verificação</p>
           </div>
         </div>
-
-        <div className="empty-state">
-          <div className="Colaboration">
-            <div className="imagem-empty">
-              <img src={emptyState} />
+        <WithScrollReveal delay={1000}>
+          <div className="empty-state">
+            <div className="Colaboration">
+              <div className="imagem-empty">
+                <img src={emptyState} />
+              </div>
+              <div className="text-colaborations">
+                <p className="title-c">Ainda não temos nenhum item aqui...</p>
+                <p className="subtitle-c">
+                  Você conhece algum conteúdo sobre? Se quiser nos <br />{" "}
+                  ajudar, compartilhe cosnoco.
+                </p>
+              </div>
+              <Link to="/contribua">Contribua conosco</Link>
             </div>
-            <div className="text-colaborations">
-              <p className="title-c">Ainda não temos nenhum item aqui...</p>
-              <p className="subtitle-c">
-                Você conhece algum conteúdo sobre? Se quiser nos <br /> ajudar,
-                compartilhe cosnoco.
-              </p>
-            </div>
-            <Link to="/contribua">Contribua conosco</Link>
           </div>
-        </div>
+        </WithScrollReveal>
       </div>
     );
   }
