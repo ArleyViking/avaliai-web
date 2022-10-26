@@ -189,17 +189,13 @@ export function Heuristic() {
         <WithScrollReveal delay={2000}>
           <div className="empty-state">
             <div className="Colaboration">
-              <div className="imagem-empty">
-                <img src={emptyState} />
-              </div>
               <div className="text-colaborations">
-                <p className="title-c">Ainda não temos nenhum item aqui...</p>
+                <p className="title-c">Aguardando itens...</p>
                 <p className="subtitle-c">
-                  Você conhece algum conteúdo sobre? Se quiser nos <br />{" "}
-                  ajudar, compartilhe cosnoco.
+                  Caso demore mais de 2 segundos, provavelmente <br /> ajudar,
+                  não temos itens para esta heurística :/
                 </p>
               </div>
-              <Link to="/contribua">Contribua conosco</Link>
             </div>
           </div>
         </WithScrollReveal>
