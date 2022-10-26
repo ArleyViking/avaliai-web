@@ -49,7 +49,7 @@ export function AboutProject() {
             title="E como usufruir disso?"
             paragraphs={[
               "Com as explicações acima, não fica dificil de entender como você pode usufruir deste acervo. Basta, a priori, entender sobre seu próprio software e ter em mente suas caracteristicas.",
-              "Após isso, basta buscar por heurísticas que atendem melhor os critérios que deseja avaliar; registrá-las em um documento e inspecionar a interface a partir da ótica delas, listando as telas e componentes que violaram as heurísticas que escolheu, propor soluções para o problema e estimar o tempo de desenvolvimento realizar a correção.",
+              "Após isso, basta utilizar os checklists prontos que disponibilizamos ou buscar por heurísticas ou categorias específicas que atendem melhor os critérios que deseja avaliar, organiza-las em um documento e inspecionar a interface a partir da ótica delas, listando as telas e componentes que violaram as heurísticas que escolheu, propor soluções para o problema e estimar o tempo de desenvolvimento realizar a correção.",
               ,
               "Para facilitar essa avaliação, fornecemos um documento que pode ajudar na hora de preencher e organizar as informações das heurísticas, itens de verificação, identificação da tela com problema etc. Para vê-lo basta acessar nosso template.",
             ]}

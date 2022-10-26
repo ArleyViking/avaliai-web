@@ -32,7 +32,13 @@ export function Header() {
           </ul>
         </nav>
 
-        <button className="botaoPrimario">Nosso template</button>
+        <a
+          href="https://docs.google.com/spreadsheets/d/18R6A4kaGIvC0CZaRwKMPakpP9ATRurFSqV1MGuKzqo4/edit?usp=sharing"
+          target="_blank"
+          className="botaoPrimario"
+        >
+          Nosso template
+        </a>
       </div>
     </header>
   );
