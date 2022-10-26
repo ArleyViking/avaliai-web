@@ -192,8 +192,8 @@ export function Heuristic() {
               <div className="text-colaborations">
                 <p className="title-c">Aguardando itens...</p>
                 <p className="subtitle-c">
-                  Caso demore mais de 2 segundos, provavelmente <br />
-                  não temos itens para esta heurística :/
+                  Caso demore mais de 5 segundos, sinto muito, <br />
+                  mas ainda não temos itens para esta heurística :/
                 </p>
               </div>
             </div>
