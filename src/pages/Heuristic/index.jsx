@@ -35,7 +35,7 @@ export function Heuristic() {
   console.log(heuristica);
 
   const { data: dates } = useSWR(
-    `/itensverificacao/${heuristicId}?pagina=${page}&tam_pagina=15`,
+    `/itensverificacao/${heuristicId}?pagina=${page}&tam_pagina=35`,
     fetcher
   );
 
@@ -43,7 +43,7 @@ export function Heuristic() {
 
   useEffect(() => {
     fetcher(
-      `/itensverificacao/${heuristicId}?pagina=${page}&tam_pagina=15`
+      `/itensverificacao/${heuristicId}?pagina=${page}&tam_pagina=35`
     ).then((data) => {
       if (data.itens.length === 0) {
         setHasMore(false);
