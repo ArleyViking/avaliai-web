@@ -186,7 +186,7 @@ export function Heuristic() {
             <ListChecks size={24} /> <p>Lista de itens de verificação</p>
           </div>
         </div>
-        <WithScrollReveal delay={1000}>
+        <WithScrollReveal delay={2000}>
           <div className="empty-state">
             <div className="Colaboration">
               <div className="imagem-empty">
