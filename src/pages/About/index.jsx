@@ -24,8 +24,8 @@ export function AboutProject() {
           <DescriptionProject
             title="O que é avaliaí?"
             paragraphs={[
-              "Os 8 checklists fornecidos são formados a partir de heurísticas e itens de verificação de design relacionados a usabilidade, visual, experiência, arquitetura da informação entre vários outros temas, afim de colaborar no processo de inspeção e avaliação das interfaces do software.",
               "O avaliaí é um acervo digital com checklists de design e usabilidade destinado a ajudar designers de UX e outros profissionais da área a avaliarem, de maneira mais fácil e de baixo custo, as suas interfaces. Esse estilo de método de avaliação pode ser comumente chamado de avaliação heurística, na qual não precisa da necessidade do usuário.",
+              "Os 8 checklists fornecidos são formados a partir de heurísticas e itens de verificação de design relacionados a usabilidade, visual, experiência, arquitetura da informação entre vários outros temas, afim de colaborar no processo de inspeção e avaliação das interfaces do software.",
             ]}
             image={ilustraCheck}
           />
