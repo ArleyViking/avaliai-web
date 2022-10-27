@@ -14,6 +14,7 @@ import { fetcher } from "../../services/fetcher";
 import "./styles.scss";
 import emptyState from "@/assets/empty.png";
 import { WithScrollReveal } from "@/components/WithScrollReveal";
+import { Stopwatch } from "../../components/Stopwatch";
 
 export function Heuristic() {
   const [data, setData] = useState({});
@@ -190,10 +191,9 @@ export function Heuristic() {
           <div className="empty-state">
             <div className="Colaboration">
               <div className="text-colaborations">
-                <p className="title-c">Aguardando itens...</p>
+                <p className="title-c">Carregando itens de verificação...</p>
                 <p className="subtitle-c">
-                  Caso demore mais de 5 segundos, sinto muito, <br />
-                  mas ainda não temos itens para esta heurística :/
+                  <Stopwatch />
                 </p>
               </div>
             </div>
