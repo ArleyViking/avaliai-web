@@ -28,6 +28,7 @@ export function Contribute() {
           </div>
         </div>
       </div>
+
       <article className="update-section">
         <div className="update-col1">
           <div className="text-contribute-up">
@@ -40,16 +41,20 @@ export function Contribute() {
             <p>Caso você seja um deles, por favor envie seu conteúdo.</p>
           </div>
           <div>
-            <div className="update-button">
-              <div className="container">
-                <EnvelopeSimple size="32px" />
+            <a
+              href={`mailto:arleygomes@alu.ufc.br?subject=Envio de heurísticas`}
+            >
+              <div className="update-button">
+                <div className="container">
+                  <EnvelopeSimple size="32px" />
+                </div>
+                <p>
+                  <span>Mande o documento por email</span> com o conteúdo
+                  <br />
+                  que tiver e algum dado seu para contato.
+                </p>
               </div>
-              <p>
-                <span>Mande o documento por email</span> com o conteúdo
-                <br />
-                que tiver e algum dado seu para contato.
-              </p>
-            </div>
+            </a>
             <p className="pfvr">
               Por favor siga as instruções abaixo para organizar o documento.
             </p>
