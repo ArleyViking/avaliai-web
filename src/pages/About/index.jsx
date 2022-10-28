@@ -65,10 +65,16 @@ export function AboutProject() {
           <article>
             <h4> Conheça o nosso template de checklist</h4>
             <p className="paragraph">
-              O nosso template, para registrar sua avaliação heurística, é super
-              simples e acessível. Basicamente, se trata de uma planilha, que
+              <a
+                target="_blank"
+                href="https://docs.google.com/spreadsheets/d/18R6A4kaGIvC0CZaRwKMPakpP9ATRurFSqV1MGuKzqo4/edit#gid=1265035445"
+              >
+                O nosso template
+              </a>{" "}
+              fornece um modelo para você registrar suas heurísticsa e é super
+              simples e acessível. Baiscamente, se trata de uma planilha, que
               você pode copiar para uma pasta no seu google drive ou realizar o
-              download e usá-la remotamente.
+              download e usá-la remotamente.{" "}
             </p>
             <div className="template_1">
               <h4 className="sub">Como você verá antes de estar preenchido</h4>

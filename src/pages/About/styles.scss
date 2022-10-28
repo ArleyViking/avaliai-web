@@ -94,6 +94,7 @@
       border-left: 2px solid #5927a9;
       color: #5927a9;
       padding-left: 12px;
+      color: rgba(9, 3, 28, 0.8);
     }
     p {
       font-family: "Inter";
@@ -107,7 +108,12 @@
       color: rgba(9, 3, 28, 0.8);
     }
     .paragraph {
-      max-width: 70%;
+      max-width: 60%;
+      a {
+        text-decoration: none;
+        color: var(--purple-200);
+        font-weight: 600;
+      }
     }
   }
 }
@@ -133,7 +139,7 @@
     }
   }
   .template {
-    margin-left: 32px;
+    margin-left: px;
     margin-right: 32px;
   }
 }
