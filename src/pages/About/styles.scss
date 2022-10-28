@@ -49,6 +49,77 @@
   }
 }
 
+.template {
+  max-width: var(--screenwidth);
+  margin: 0 auto;
+  margin-bottom: 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(108, 64, 234, 0.06);
+  padding: 32px;
+  border-radius: 1rem;
+
+  article {
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    max-width: 1380px;
+
+    h4 {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 130%;
+      /* or 31px */
+
+      color: #09031c;
+    }
+
+    .template_1 {
+      margin-top: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      width: 100%;
+    }
+    .sub {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 130%;
+      border-left: 2px solid #5927a9;
+      color: #5927a9;
+      padding-left: 12px;
+    }
+    p {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 130%;
+      margin-top: 16px;
+      /* or 21px */
+
+      color: rgba(9, 3, 28, 0.8);
+    }
+    .paragraph {
+      max-width: 70%;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .DescriptionProject {
+    .Imagem {
+      display: none;
+    }
+  }
+}
+
 @media (max-width: 1366px) {
   .header {
     .content-about {
@@ -60,6 +131,10 @@
     .Colaboration {
       margin: 0 32px;
     }
+  }
+  .template {
+    margin-left: 32px;
+    margin-right: 32px;
   }
 }
 

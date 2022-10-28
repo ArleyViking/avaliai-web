@@ -2,6 +2,8 @@ import { DescriptionProject } from "../../components/DescriptionProject";
 import "./styles.scss";
 import ilustraCheck from "@/assets/ilustraCheck.svg";
 import pc from "@/assets/pc.svg";
+import template_1 from "@/assets/template_1.svg";
+import template_2 from "@/assets/template_2.svg";
 import { Colaboration } from "../../components/Colaboration";
 import { WithScrollReveal } from "@/components/WithScrollReveal";
 
@@ -57,6 +59,29 @@ export function AboutProject() {
           />
         </div>
       </WithScrollReveal>
+
+      <WithScrollReveal>
+        <div className="template">
+          <article>
+            <h4> Conheça o nosso template de checklist</h4>
+            <p className="paragraph">
+              O nosso template, para registrar sua avaliação heurística, é super
+              simples e acessível. Basicamente, se trata de uma planilha, que
+              você pode copiar para uma pasta no seu google drive ou realizar o
+              download e usá-la remotamente.
+            </p>
+            <div className="template_1">
+              <h4 className="sub">Como você verá antes de estar preenchido</h4>
+              <img src={template_1} className="Imagem" />
+            </div>
+            <div className="template_1">
+              <h4 className="sub">Após o documento estar preenchido</h4>
+              <img src={template_2} className="Imagem" />
+            </div>
+          </article>
+        </div>
+      </WithScrollReveal>
+
       <WithScrollReveal>
         <Colaboration
           title="Entendeu sobre o projeto?"
