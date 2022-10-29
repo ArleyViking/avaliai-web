@@ -46,3 +46,26 @@
     height: 38px;
   }
 }
+
+@media (max-width: 375px) {
+  .text-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .title-icon {
+      flex-direction: column;
+    }
+
+    .title {
+      font-size: 20px;
+      margin-bottom: 8px;
+      margin-top: 8px;
+    }
+    .subtitle {
+      font-size: 18px;
+      line-height: 130%;
+      margin-bottom: 8px;
+    }
+  }
+}

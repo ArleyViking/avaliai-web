@@ -37,3 +37,9 @@
     width: calc(100% - 32px * 2);
   }
 }
+
+@media (max-width: 375px) {
+  .MiniDash {
+    margin-top: -150px;
+  }
+}

@@ -69,3 +69,17 @@
     }
   }
 }
+
+@media (max-width: 375px) {
+  .CategoryCard {
+    max-width: 81%;
+    .Content {
+      .data {
+        width: 110%;
+        p {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}

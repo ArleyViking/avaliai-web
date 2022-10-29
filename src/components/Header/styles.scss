@@ -76,12 +76,31 @@ header {
     background-color: #5623e6;
   }
 }
+
 @media (max-width: 1440px) {
   header {
     position: fixed;
     z-index: 1;
     .content {
       padding: 12px 32px;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  header {
+    position: fixed;
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .navbar {
+      display: none;
+    }
+    .botaoPrimario {
+      display: none;
     }
   }
 }

@@ -72,3 +72,33 @@
     }
   }
 }
+
+@media (max-width: 1366px) {
+  .CardChecklist {
+    padding: 32px 32px 8px;
+    gap: 24px;
+
+    .Imagem {
+      width: 22vw;
+    }
+    .text {
+      .title-card {
+        font-size: 18px;
+      }
+      .descrition-card {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .CardChecklist {
+    padding: 32px 32px 8px;
+    gap: 24px;
+
+    .Imagem {
+      width: 62vw;
+    }
+  }
+}

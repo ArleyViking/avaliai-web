@@ -69,3 +69,19 @@
     }
   }
 }
+
+@media (max-width: 375px) {
+  .SectionBanner {
+    height: 90vh;
+    .Content {
+      padding-left: 16px;
+      padding-right: 16px;
+      h1 {
+        font-size: 32px;
+      }
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+}
