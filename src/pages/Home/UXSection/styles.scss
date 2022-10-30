@@ -3,6 +3,10 @@
   margin: var(--section-margin) auto;
 }
 
+#items-responsive {
+  display: none;
+}
+
 .Items-UX {
   margin-top: 2rem;
   display: grid;
@@ -18,6 +22,12 @@
   .UXSection {
     margin-left: 40px;
     margin-right: 40px;
+  }
+  #items-responsive {
+    display: grid;
+  }
+  .Items-UX {
+    display: none;
   }
 }
 

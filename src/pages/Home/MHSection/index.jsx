@@ -45,6 +45,23 @@ export function MHSection() {
             </WithScrollReveal>
           ))}
       </div>
+      <div className="Items-MH" id="items-responsive">
+        {!!categories &&
+          categories?.slice(0, 3).map((category) => (
+            <WithScrollReveal delay={500} key={category.id}>
+              <Link
+                to={`/checklist/categoria/${category.id}`}
+                key={category.id}
+              >
+                <CategoryCard
+                  title={category.nome}
+                  num_heu={category.num_heu}
+                  num_itens={category.num_itens}
+                />
+              </Link>
+            </WithScrollReveal>
+          ))}
+      </div>
     </section>
   );
 }

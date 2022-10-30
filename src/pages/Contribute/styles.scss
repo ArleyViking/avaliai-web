@@ -238,3 +238,38 @@
     }
   }
 }
+
+@media (max-width: 1280px) {
+  .Contribute {
+    .header-contribute {
+      .content-contribute {
+        margin-left: 32px;
+      }
+    }
+    .update-section {
+      margin: 48px 32px;
+
+      .update-col1 {
+        width: 50%;
+        .text-contribute-up {
+          h5 {
+            font-size: 24px;
+          }
+        }
+      }
+    }
+
+    .col2 {
+      img {
+        width: 300px;
+      }
+    }
+    .steps-send {
+      margin: 0 32px;
+      max-width: 1300px;
+      .steps {
+        gap: 8px;
+      }
+    }
+  }
+}

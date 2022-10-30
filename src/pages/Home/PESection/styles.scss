@@ -2,6 +2,9 @@
   max-width: var(--screenwidth);
   margin: var(--section-margin) auto;
 }
+#items-responsive {
+  display: none;
+}
 
 .Items-PE {
   margin-top: 2rem;
@@ -18,5 +21,11 @@
   .PESection {
     margin-left: 40px;
     margin-right: 40px;
+  }
+  .Items-PE {
+    display: none;
+  }
+  #items-responsive {
+    display: grid;
   }
 }
