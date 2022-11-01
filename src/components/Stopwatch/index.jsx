@@ -22,3 +22,32 @@ export function Stopwatch() {
     </div>
   );
 }
+
+export function Counter({ count, label }) {
+  const [totalTime, setTotalTime] = useState(0);
+
+  const seconds = totalTime;
+
+  useEffect(() => {
+    if (totalTime == count) {
+      return;
+    } else {
+      setTimeout(() => {
+        setTotalTime(totalTime + 1);
+      }, 25);
+    }
+  }, [totalTime]);
+
+  if (label == "Itens de verificação") {
+    useEffect(() => {
+      if (totalTime == count) {
+        return;
+      } else {
+        setTimeout(() => {
+          setTotalTime(totalTime + 1);
+        }, 0.9);
+      }
+    }, [totalTime]);
+  }
+  return <div>{seconds}</div>;
+}
