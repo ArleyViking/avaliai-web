@@ -45,7 +45,7 @@ export function Counter({ count, label }) {
       } else {
         setTimeout(() => {
           setTotalTime(totalTime + 1);
-        }, 0.9);
+        }, 1);
       }
     }, [totalTime]);
   }
