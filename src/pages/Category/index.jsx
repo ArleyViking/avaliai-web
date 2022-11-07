@@ -1,9 +1,15 @@
-import { ArrowLeft, CaretRight, Folders, FileText } from "phosphor-react";
+import {
+  ArrowLeft,
+  CaretRight,
+  Folders,
+  FileText,
+  ArrowUp,
+} from "phosphor-react";
 import { Link, useParams } from "react-router-dom";
 import { HeuristicCard } from "../../components/HeuristicCard";
 import "./styles.scss";
 import useSWR from "swr";
-
+import ScrollToTop from "react-scroll-to-top";
 import { fetcher, fetcher2 } from "../../services/fetcher";
 
 export function Category() {
@@ -20,6 +26,14 @@ export function Category() {
 
   return (
     <div className="Category">
+      <ScrollToTop
+        smooth={true}
+        width={24}
+        height={24}
+        top={450}
+        color="black"
+        className="ButtonToTop"
+      />
       <div className="header-category">
         <div className="content-wrapper-category">
           <div className="content-category">

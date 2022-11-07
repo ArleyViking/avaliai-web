@@ -1,4 +1,14 @@
 .Heuristic {
+  .ButtonToTop {
+    display: flex;
+    width: 70px;
+    height: 70px;
+    border-radius: 16px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 16px;
+    background-color: #fff;
+  }
   a {
     text-decoration: none;
   }

@@ -6,6 +6,7 @@ import { WithScrollReveal } from "@/components/WithScrollReveal";
 import useSWR from "swr";
 import { fetcher } from "@/services/fetcher";
 import { Link } from "react-router-dom";
+import ScrollToTop from "react-scroll-to-top";
 
 export function UXSection() {
   const { data: categories } = useSWR(

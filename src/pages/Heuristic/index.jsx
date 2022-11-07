@@ -12,9 +12,10 @@ import { ItemVerCard } from "../../components/ItemVerCard/ItemVerCard";
 import { useIntersection } from "../../hooks/useIntersection";
 import { fetcher } from "../../services/fetcher";
 import "./styles.scss";
-import emptyState from "@/assets/empty.png";
 import { WithScrollReveal } from "@/components/WithScrollReveal";
 import { Stopwatch } from "../../components/Stopwatch";
+
+import ScrollToTop from "react-scroll-to-top";
 
 export function Heuristic() {
   const [data, setData] = useState({});
@@ -74,6 +75,13 @@ export function Heuristic() {
   if (itens) {
     return (
       <div className="Heuristic">
+        <ScrollToTop
+          smooth={true}
+          width={24}
+          height={24}
+          top={450}
+          className="ButtonToTop"
+        />
         <div className="header-heuristic">
           <div className="content-wrapper-heuristic">
             <div className="content-heuristic">
