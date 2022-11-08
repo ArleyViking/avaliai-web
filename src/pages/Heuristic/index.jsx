@@ -181,20 +181,24 @@ export function Heuristic() {
               onclick="location.href = document.referrer;"
               className="item"
             >
-              <Folders size={24} /> <p>Lista de categorias</p>
+              <Folders size={24} className="categorias" />{" "}
+              <p>Lista de categorias</p>
             </button>
           </Link>
           <CaretRight weight="bold" />
           <a href="javascript:history.back()">
             <div className="item">
-              <FileText size={24} /> <p>Lista de heurísticas</p>
+              <FileText size={24} className="heuristicas" />{" "}
+              <p>Lista de heurísticas</p>
             </div>
           </a>
           <CaretRight weight="bold" />
           <div className="item">
-            <ListChecks size={24} /> <p>Lista de itens de verificação</p>
+            <ListChecks size={24} className="itens" />{" "}
+            <p>Lista de itens de verificação</p>
           </div>
         </div>
+
         <WithScrollReveal delay={2000}>
           <div className="empty-state">
             <div className="Colaboration">

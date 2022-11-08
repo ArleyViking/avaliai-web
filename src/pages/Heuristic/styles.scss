@@ -276,5 +276,36 @@
       margin-right: 32px;
       width: auto;
     }
+    .itenslist {
+    }
+  }
+}
+
+@media (max-width: 430px) {
+  .Heuristic {
+    .header-heuristic {
+      .content-heuristic {
+        .title-heuristic {
+          font-size: 1.5rem;
+        }
+        .description-heuristic {
+          font-size: 14px;
+          max-width: 100%;
+        }
+      }
+      .datas {
+        flex-wrap: wrap;
+      }
+    }
+    .breadcrumb {
+      .item {
+        svg {
+          display: none;
+        }
+        p {
+          font-size: 14px;
+        }
+      }
+    }
   }
 }

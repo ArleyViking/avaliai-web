@@ -63,12 +63,14 @@ export function Category() {
       <div className="breadcrumb">
         <Link to={`/checklist/${checklistId}`}>
           <div className="item">
-            <Folders size={24} /> <p>Lista de categorias</p>
+            <Folders size={24} className="categorias" />{" "}
+            <p>Lista de categorias</p>
           </div>
         </Link>
         <CaretRight weight="bold" />
         <div className="item">
-          <FileText size={24} /> <p>Lista de heurísticas</p>
+          <FileText size={24} className="heuristicas" />{" "}
+          <p>Lista de heurísticas</p>
         </div>
       </div>
 

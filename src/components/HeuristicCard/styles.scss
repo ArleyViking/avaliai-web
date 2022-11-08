@@ -80,3 +80,20 @@
     }
   }
 }
+
+@media (max-width: 430px) {
+  .HeuristicCard {
+    .Content {
+      .title {
+        .title-heuristic {
+          font-size: 1rem;
+        }
+        .description-heuristic {
+          font-size: 13px;
+
+          color: rgba(9, 3, 28, 0.8);
+        }
+      }
+    }
+  }
+}
