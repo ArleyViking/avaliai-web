@@ -46,7 +46,7 @@ export function ItemVerCard({ ask, id }) {
       </div>
       <CopyToClipboard text={ask} onCopy={(_, result) => notify(result)}>
         <button>
-          <Copy size={24} />
+          <Copy size={24} weight="fill" />
         </button>
       </CopyToClipboard>
     </div>
