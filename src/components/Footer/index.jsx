@@ -7,7 +7,7 @@ export function Footer() {
       <div className="Content-footer">
         <div className="copy">
           <img src={logo} />
-          <p>Copyright © 2020 avaliaí</p>
+          <p>Copyright © 2022 avaliaí</p>
         </div>
         <p>
           <span> Acesse a monografia</span> que deu origem a este projeto.
