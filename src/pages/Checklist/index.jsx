@@ -57,6 +57,7 @@ export function Checklist() {
           </div>
         </div>
       </div>
+
       <div className="breadcrumb">
         <Folders size={24} />
         <p>Lista de categorias</p>
