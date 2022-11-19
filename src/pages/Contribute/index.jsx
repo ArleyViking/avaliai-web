@@ -20,10 +20,10 @@ export function Contribute() {
           <div className="content-contribute">
             <h2 className="title-contribute">Contribua conosco</h2>
             <p className="description-contribute">
-              Para este acervo crescer e atinjir novos designers precisamos
+              Para este acervo crescer e atingir novos designers precisamos
               fornecer mais checklists e heurísticas
               <br /> diversas que estejam conectados a outros tipos de
-              softwares, temas ou usuários. (UFC).
+              softwares, temas ou usuários.
             </p>
           </div>
         </div>
