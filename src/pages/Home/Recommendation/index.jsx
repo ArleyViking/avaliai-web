@@ -21,8 +21,8 @@ export function RecommendationSection() {
       </div>
       <div className="items-card">
         {!!checklists &&
-          checklists?.slice(0, 3).map((checklist) => (
-            <WithScrollReveal delay={500} key={checklist.id}>
+          checklists?.slice(0, 3).map((checklist, i) => (
+            <WithScrollReveal delay={i * 500} key={checklist.id}>
               <Link to={`/checklist/${checklist.id}`}>
                 <CardChecklist
                   title={checklist.nome}

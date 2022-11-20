@@ -12,6 +12,8 @@ import useSWR from "swr";
 import ScrollToTop from "react-scroll-to-top";
 import { fetcher, fetcher2 } from "../../services/fetcher";
 
+import { WithScrollReveal } from "@/components/WithScrollReveal";
+
 export function Category() {
   const { id: categoryId } = useParams();
 
@@ -76,15 +78,17 @@ export function Category() {
 
       <div className="heuristiclist">
         {!!heuristics &&
-          heuristics?.map((heuristic) => (
-            <Link to={`/checklist/categoria/heuristica/${heuristic._id}`}>
-              <HeuristicCard
-                title={heuristic.nome}
-                description={heuristic.descricao}
-                num_itens={heuristic.num_itens}
-                tipo_fonte={heuristic.tipo_fonte}
-              />
-            </Link>
+          heuristics?.map((heuristic, i) => (
+            <WithScrollReveal delay={i * 100} key={heuristic.id}>
+              <Link to={`/checklist/categoria/heuristica/${heuristic._id}`}>
+                <HeuristicCard
+                  title={heuristic.nome}
+                  description={heuristic.descricao}
+                  num_itens={heuristic.num_itens}
+                  tipo_fonte={heuristic.tipo_fonte}
+                />
+              </Link>
+            </WithScrollReveal>
           ))}
       </div>
     </div>

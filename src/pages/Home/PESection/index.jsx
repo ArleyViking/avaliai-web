@@ -30,8 +30,8 @@ export function PESection() {
 
       <div className="Items-PE">
         {!!categories &&
-          categories?.map((category) => (
-            <WithScrollReveal delay={500} key={category.id}>
+          categories?.map((category, i) => (
+            <WithScrollReveal delay={i * 500} key={category.id}>
               <Link
                 to={`/checklist/categoria/${category.id}`}
                 key={category.id}

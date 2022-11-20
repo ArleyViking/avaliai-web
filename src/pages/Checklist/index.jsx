@@ -6,6 +6,7 @@ import { useParams } from "react-router-dom";
 import { CategoryCard } from "../../components/CategoryCard";
 import useSWR from "swr";
 
+import { WithScrollReveal } from "@/components/WithScrollReveal";
 import { fetcher } from "../../services/fetcher";
 import { checklists as checklistsConstants } from "@/constants/checklist";
 
@@ -65,14 +66,19 @@ export function Checklist() {
 
       <div className="categorylist">
         {!!categories &&
-          categories?.map((category) => (
-            <Link to={`/checklist/categoria/${category.id}`} key={category.id}>
-              <CategoryCard
-                title={category.nome}
-                num_heu={category.num_heu}
-                num_itens={category.num_itens}
-              />
-            </Link>
+          categories?.map((category, i) => (
+            <WithScrollReveal delay={i * 200} key={category.id}>
+              <Link
+                to={`/checklist/categoria/${category.id}`}
+                key={category.id}
+              >
+                <CategoryCard
+                  title={category.nome}
+                  num_heu={category.num_heu}
+                  num_itens={category.num_itens}
+                />
+              </Link>
+            </WithScrollReveal>
           ))}
       </div>
     </div>

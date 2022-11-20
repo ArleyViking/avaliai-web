@@ -30,8 +30,8 @@ export function MHSection() {
 
       <div className="Items-MH">
         {!!categories &&
-          categories?.slice(0, 4).map((category) => (
-            <WithScrollReveal delay={500} key={category.id}>
+          categories?.slice(0, 4).map((category, i) => (
+            <WithScrollReveal delay={i * 500} key={category.id}>
               <Link
                 to={`/checklist/categoria/${category.id}`}
                 key={category.id}

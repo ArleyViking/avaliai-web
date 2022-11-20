@@ -6,7 +6,6 @@ import { WithScrollReveal } from "@/components/WithScrollReveal";
 import useSWR from "swr";
 import { fetcher } from "@/services/fetcher";
 import { Link } from "react-router-dom";
-import ScrollToTop from "react-scroll-to-top";
 
 export function UXSection() {
   const { data: categories } = useSWR(
@@ -29,8 +28,8 @@ export function UXSection() {
 
       <div className="Items-UX">
         {!!categories &&
-          categories?.slice(0, 4).map((category) => (
-            <WithScrollReveal delay={500} key={category.id}>
+          categories?.slice(0, 4).map((category, i) => (
+            <WithScrollReveal delay={i * 500} key={category.id}>
               <Link
                 to={`/checklist/categoria/${category.id}`}
                 key={category.id}
