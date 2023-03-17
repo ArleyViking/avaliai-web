@@ -10,7 +10,7 @@ export function Footer() {
           <p>Copyright © 2022 avaliaí</p>
         </div>
         <p>
-          <span> Acesse a monografia</span> que deu origem a este projeto.
+          <a href="https://repositorio.ufc.br/handle/riufc/70363" target="_blank"> Acesse a monografia</a> que deu origem a este projeto.
         </p>
       </div>
     </div>
