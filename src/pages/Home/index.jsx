@@ -1,12 +1,5 @@
-import Hotjar from "@hotjar/browser";
-
-const siteId = 3712959;
-const hotjarVersion = 6;
-
-Hotjar.init(siteId, hotjarVersion);
-
-import { BannerHeader } from "./Banner/Header";
 import { MiniDash } from "./MiniDash";
+import { BannerHeader } from "./Banner/Header";
 import { RecommendationSection } from "./Recommendation";
 import { BannerAbout } from "./Banner/About";
 
@@ -17,6 +10,13 @@ import { Colaboration } from "@/components/Colaboration";
 
 import { MHSection } from "./MHSection";
 import { JMSection } from "./JMSection";
+
+import Hotjar from "@hotjar/browser";
+
+const siteId = 3712959;
+const hotjarVersion = 6;
+
+Hotjar.init(siteId, hotjarVersion);
 
 export function Home() {
   return (
