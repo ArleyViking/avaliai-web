@@ -11,7 +11,8 @@ import { Colaboration } from "@/components/Colaboration";
 import { MHSection } from "./MHSection";
 import { JMSection } from "./JMSection";
 
-const siteId = 123;
+import Hotjar from "@hotjar/browser";
+const siteId = 3712959;
 const hotjarVersion = 6;
 
 Hotjar.init(siteId, hotjarVersion);
