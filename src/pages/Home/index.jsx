@@ -1,3 +1,10 @@
+import Hotjar from "@hotjar/browser";
+
+const siteId = 3712959;
+const hotjarVersion = 6;
+
+Hotjar.init(siteId, hotjarVersion);
+
 import { BannerHeader } from "./Banner/Header";
 import { MiniDash } from "./MiniDash";
 import { RecommendationSection } from "./Recommendation";
