@@ -3,7 +3,7 @@ import mixpanel from "mixpanel-browser"; // Importe o Mixpanel
 
 import "./styles.scss";
 
-export function CardChecklist({ title, description, image }) {
+export function CardChecklist({ title, description, imagem }) {
   const trackCardClick = () => {
     // Registre o evento personalizado quando o card for clicado
     mixpanel.track("Card Clicado", { title, description });
@@ -11,7 +11,7 @@ export function CardChecklist({ title, description, image }) {
 
   return (
     <div className="CardChecklist" onClick={trackCardClick}>
-      <img className="Imagem" src={image} />
+      <img className="Imagem" src={imagem} />
 
       <div className="text">
         <p className="title-card">{title}</p>
