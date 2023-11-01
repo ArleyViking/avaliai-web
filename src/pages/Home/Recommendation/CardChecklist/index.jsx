@@ -3,10 +3,10 @@ import mixpanel from "mixpanel-browser"; // Importe o Mixpanel
 
 import "./styles.scss";
 
-export function CardChecklist({ title, descrition, imagem }) {
+export function CardChecklist({ title, descrition, imagem, titleTagMixpanel }) {
   const trackCardClick = () => {
     // Registre o evento personalizado quando o card for clicado
-    mixpanel.track({ "Card:": title }, { title, descrition });
+    mixpanel.track({ titleTagMixpanel }, { title, descrition });
   };
 
   return (

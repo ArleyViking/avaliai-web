@@ -28,6 +28,7 @@ export function RecommendationSection() {
                   title={checklist.nome}
                   descrition={checklist.descricao}
                   imagem={checklistsConstants[checklist.id]}
+                  titleTagMixpanel={"Card:" + checklist.nome}
                 />
               </Link>
             </WithScrollReveal>
