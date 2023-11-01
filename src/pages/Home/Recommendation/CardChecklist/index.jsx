@@ -6,7 +6,7 @@ import "./styles.scss";
 export function CardChecklist({ title, descrition, imagem }) {
   const trackCardClick = () => {
     // Registre o evento personalizado quando o card for clicado
-    mixpanel.track({ title }, { title, descrition });
+    mixpanel.track({ "Card:": title }, { title, descrition });
   };
 
   return (
