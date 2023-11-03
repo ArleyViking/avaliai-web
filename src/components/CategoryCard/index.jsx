@@ -1,4 +1,7 @@
 import "./styles.scss";
+
+import mixpanel from "mixpanel-browser"; // Importe o Mixpanel
+
 export function CategoryCard({ title, num_heu, num_itens }) {
   const trackCardClick = () => {
     // Registre o evento personalizado quando o card for clicado
