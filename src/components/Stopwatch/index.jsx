@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 export function Stopwatch() {
-  const [totalTime, setTotalTime] = useState(7);
+  const [totalTime, setTotalTime] = useState(10);
 
   const seconds = totalTime;
 

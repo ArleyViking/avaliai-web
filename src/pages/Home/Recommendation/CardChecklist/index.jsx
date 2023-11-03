@@ -1,4 +1,3 @@
-import React from "react";
 import mixpanel from "mixpanel-browser"; // Importe o Mixpanel
 
 import "./styles.scss";
