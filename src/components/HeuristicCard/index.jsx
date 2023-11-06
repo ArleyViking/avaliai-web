@@ -1,8 +1,16 @@
 import "./styles.scss";
 
 export function HeuristicCard({ title, description, num_itens, tipo_fonte }) {
+  const trackCardClickHeu = () => {
+    // Registre o evento personalizado quando o card for clicado
+    mixpanel.track(
+      { Heurística: title },
+      { title, description, num_itens, tipo_fonte }
+    );
+  };
+
   return (
-    <div className="HeuristicCard">
+    <div className="HeuristicCard" onClick={trackCardClickHeu}>
       <div className="Content">
         <div className="title">
           <p>Heurística</p>
