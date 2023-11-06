@@ -1,4 +1,5 @@
 import "./styles.scss";
+import mixpanel from "mixpanel-browser"; // Importe o Mixpanel
 
 export function HeuristicCard({ title, description, num_itens, tipo_fonte }) {
   const trackCardClickHeu = () => {
