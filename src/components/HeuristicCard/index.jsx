@@ -4,7 +4,7 @@ export function HeuristicCard({ title, description, num_itens, tipo_fonte }) {
   const trackCardClickHeu = () => {
     // Registre o evento personalizado quando o card for clicado
     mixpanel.track(
-      { Heurística: title },
+      { "Heurística:": title },
       { title, description, num_itens, tipo_fonte }
     );
   };
